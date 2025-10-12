@@ -4,38 +4,10 @@ This folder contains all test cases for the web version.
 
 # Test Scenario Template
 
-**Test Case ID:** TC-XXX
+# Test Scenarios for [Feature/Module Name]
 
-## Test Description
-(Briefly describe what this test verifies or validates.)
+| Test Case ID | Test Description | Prerequisites | Test Steps | Expected Result | Status     | Remark          | Release Cycle | Test Execution Date | Test Executed By |
+|--------------|------------------|--------------|------------|----------------|------------|-----------------|---------------|--------------------|------------------|
+| TC-001       | User login with valid credentials | User account exists | 1. Go to login<br>2. Enter username<br>3. Enter password<br>4. Click Login | Dashboard loads | Not Started | None            | Release 3.0   |                  |                  |
+| TC-002       | Login fails with invalid password | User account exists | 1. Go to login<br>2. Enter username<br>3. Enter wrong password<br>4. Click Login | Error message shown | Not Started |                 | Release 3.0   |                  |                  |
 
-## Prerequisites
-(List any setup, conditions, or data required before executing the test.)
-
-## Test Steps
-1. (Step 1)
-2. (Step 2)
-3. (Step 3)
-...
-
-## Expected Result
-(Describe what should happen after executing the steps successfully.)
-
-## Status
-- [ ] Not Started  
-- [ ] In Progress  
-- [ ] Passed  
-- [ ] Failed  
-- [ ] Blocked
-
-## Remark
-(Any additional comments or observations during testing or post-test review.)
-
-## Release Cycle
-(e.g., Release 3.0)
-
-## Test Execution Date
-(Use format: YYYY-MM-DD; to be filled during testing)
-
-## Test Executed By
-(Your name or GitHub handle; to be filled during testing)
