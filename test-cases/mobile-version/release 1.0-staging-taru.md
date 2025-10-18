@@ -45,7 +45,7 @@ This folder contains all test cases for the web version.
 | TC-035       | Verify “Remember me” checkbox functionality | Landing on Login page | 1. Go to the website<br>2. After that, the Landing page opens <br>3. After that, we click on menu<br>4. Click on 'Sign in' | Username is remembered on the login page. | Successfully |None            | Release 1.0   | 17/10/2025   |Tarurendra |
 | TC-036       | Verify “Forgot password” link navigation | none | 1. Go to the sign-in <br>2. After that, the Landing on login page <br>3. After that, we click on forgot password |User is redirected to the password reset page. | Fail | It's not showing any email for reset password                | Release 1.0   | 17/10/2025                 | Tarurendra                 |
 | TC-037       | Verify 'Query Sessions' | Landing on Query Page | 1. Go to login<br>2. After that, it directed to the ArchAI<br>3. Click on menu<br> | It should give correct time and current query | Fail |It's not showing any time            | Release 1.0   | 17/10/2025                 | Tarurendra                 |
-
+| TC-038       | Verify "Scrolling above to see the response" | Query Page | 1. Go to login<br>2. After that, it directed to the ArchAI<br>3. After that, we search | Scrolling through chat response after receiving an AI response should be smooth and responsive on all devices without any lag or delay. | Fail |It's not working proper way               | Release 1.0   | 17/10/2025                 |Tarurendra                  |
 
 
 
