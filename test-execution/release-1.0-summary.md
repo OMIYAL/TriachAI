@@ -13,6 +13,7 @@
 | #106   | TC-024       | Medium   | Query Page  | Open | @dev2       | When users ask 2–3 questions at once |
 | #107   | TC-025       | Hight   | Forgot Password  | Open | @dev2       | is not functioning on both mobile and desktop |
 | #108   | TC-026       | Medium   | Query sessions  | Open | @dev2       | Datet and time-based query sessions fail to display |
+| #109   | TC-027       | Medium   | Login  | Open | @dev2       | White Screen Appears After Clicking Login on Edge and Firefox |
 
 ## Test Execution Overview
 
