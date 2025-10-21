@@ -24,9 +24,9 @@
 
 | Test Status | Count | Percentage |
 |-------------|-------|------------|
-| Passed      | 80    | 80%        |
-| Failed      | 15    | 15%        |
-| Blocked     | 5     | 5%         |
+| Passed      | 89    | 89%        |
+| Failed      | 10    | 10%        |
+| Blocked     | 1     | 1%         |
 
 ## Key Insights and Recommendations
 
