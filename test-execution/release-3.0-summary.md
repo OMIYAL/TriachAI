@@ -1,0 +1,27 @@
+# Release 3.0 Bug and Test Summary
+
+**Release Milestone:** Release 3.0  
+**Date:** 2025-10-22  
+**Test Lead:** @yourusername  
+
+## Bug Summary
+
+| Bug ID | Test Case ID | Priority | Module | Status | Assigned To | Comments |
+|--------|--------------|----------|--------|--------|-------------|----------|
+| #101   | TC-015       | High     | Payment| Open   | @dev1       | Payment gateway timeout |
+| #105   | TC-023       | Medium   | Login  | Closed | @dev2       | Resolved in patch 3.0.1 |
+| #39   | TC-024       | Medium   | Bookmarked Queries  | Open | @dev2       | Bookmark Feature Not Working on Both Desktop and Mobile |
+
+
+## Test Execution Overview
+
+| Test Status | Count | Percentage |
+|-------------|-------|------------|
+| Passed      | 89    | 89%        |
+| Failed      | 10    | 10%        |
+| Blocked     | 1     | 1%         |
+
+## Key Insights and Recommendations
+
+- Prioritize fixing high-priority bugs before release.
+- Follow up on blocked test cases.
