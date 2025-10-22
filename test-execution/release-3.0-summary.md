@@ -11,6 +11,7 @@
 | #101   | TC-015       | High     | Payment| Open   | @dev1       | Payment gateway timeout |
 | #105   | TC-023       | Medium   | Login  | Closed | @dev2       | Resolved in patch 3.0.1 |
 | #39   | TC-024       | Medium   | Bookmarked Queries  | Open | @dev2       | Bookmark Feature Not Working on Both Desktop and Mobile |
+| #40   | TC-025       | Medium   | Feedback icon  | Open | @dev2       | In dark mode it not visible clearly |
 
 
 ## Test Execution Overview
