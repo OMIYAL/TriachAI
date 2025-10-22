@@ -1,6 +1,6 @@
-# Web App Test Cases
+# Mobile Test Cases
 
-This folder contains all test cases for the web version.
+This folder contains all test cases for the mobile version.
 
 # Test Scenario Template
 
