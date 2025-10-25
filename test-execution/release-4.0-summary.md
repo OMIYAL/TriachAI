@@ -12,7 +12,7 @@
 | #105   | TC-023       | Medium   | Login  | Closed | @dev2       | Resolved in patch 3.0.1 |
 | #39   | TC-024       | High   | Bookmarked Queries  | Closed | @dev2       | Resloved|
 | #40   | TC-025       | Medium   | Feedback icon  | Open | @dev2       | In dark mode it not visible clearly |
-| #43   | TC-026       | Medium   | Login, Register  | Open | @dev2       | Poor Contrast in Login, Register Input Fields|
+| #43   | TC-026       | Medium   | Login, Register  | Closed | @dev2       | Poor Contrast in Login, Register Input Fields|
 
 
 ## Test Execution Overview
