@@ -13,13 +13,14 @@
 | #39   | TC-024       | High   | Bookmarked Queries  | Closed | @dev2       | Resloved|
 | #40   | TC-025       | Medium   | Feedback icon  | Open | @dev2       | In dark mode it not visible clearly |
 | #43   | TC-026       | Medium   | Login, Register  | Closed | @dev2       | Poor Contrast in Login, Register Input Fields|
+| #48   | TC-027       | Medium   | Feedback Type Buttons  | Open | @dev2       | Feedback Type Buttons Not Clearly Visible in Dark Mode|
 
 
 ## Test Execution Overview
 
 | Test Status | Count | Percentage |
 |-------------|-------|------------|
-| Passed      | 90    | 89%        |
+| Passed      | 90    | 90%        |
 | Failed      | 10    | 10%        |
 | Blocked     | 0     | 0%         |
 
