@@ -18,6 +18,7 @@
 | #70   | TC-037       | Medium     | Jurisdiction & Adopted Codes Not Visible After Navigation| Open   | @dev1       | After opening Bookmarked Queries or Session History and then navigating back to the main page, the Jurisdiction and Adopted Codes sections do not appear. |
 | #71   | TC-038       | Medium     | Menu Options Not Visible on Mobile | Open   | @dev1       | On mobile devices, after clicking the menu icon, Code & Preferences, Session History, and Collaboration options are not visible. |
 | #72   | TC-039       | Minor     | Stream reading error| Open   | @dev1       | When the user searches for any query, the system shows a “stream reading error” and fails to load the AI response properly. |
+| #73   | TC-040       | Medium     | Jurisdiction Missing After Navigation| Open   | @dev1       | After navigating away and coming back to the main page, the selected Jurisdiction is missing / not displayed. |
 
 ## Test Execution Overview
 
