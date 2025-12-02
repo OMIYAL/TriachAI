@@ -17,6 +17,7 @@
 | #69   | TC-036       | Medium     | Page Refreshes After Stopping Query| Open   | @dev1       | When a user stops an active query and selects another query, the entire page refreshes automatically, interrupting the workflow. |
 | #70   | TC-037       | Medium     | Jurisdiction & Adopted Codes Not Visible After Navigation| Open   | @dev1       | After opening Bookmarked Queries or Session History and then navigating back to the main page, the Jurisdiction and Adopted Codes sections do not appear. |
 | #71   | TC-038       | Medium     | Menu Options Not Visible on Mobile | Open   | @dev1       | On mobile devices, after clicking the menu icon, Code & Preferences, Session History, and Collaboration options are not visible. |
+| #72   | TC-039       | Minor     | Stream reading error| Open   | @dev1       | When the user searches for any query, the system shows a “stream reading error” and fails to load the AI response properly. |
 
 ## Test Execution Overview
 
