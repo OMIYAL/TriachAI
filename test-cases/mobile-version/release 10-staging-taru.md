@@ -1,0 +1,18 @@
+# Mobile Test Cases
+
+This folder contains all test cases for the mobile version.
+
+# Test Scenario Template
+
+# Test Scenarios for [Feature/Module Name]
+
+| Test Case ID | Test Description | Prerequisites | Test Steps | Expected Result | Status     | Remark          | Release Cycle | Test Execution Date | Test Executed By | Version Number|
+|--------------|------------------|--------------|------------|----------------|------------|-----------------|---------------|--------------------|----------------------|------------   |                
+| TC-001       | Ensure on logging in the guide tour is prompted | User on Query Page | 1. Go to the login page<br>2. Enter your credentials<br>3. Click on login<br>4. You see a guide tour prompt | Guide tour opens | Fail | none        | Release 10.0   |11/12/2025          | Tarurendra  | v1.25.12.7     |
+| TC-002       | Choosing any predefined query and sending to arch ai assistant prompts ai to send a message to select jurisdiction first | User on Query Page | 1. Go to the login<br>2. Check the Query Page<br>3. Click on any predefined question <br>4. Send the message |Ai should prompt to select jurisdiction first| Successfully | None | Release 10.0   |11/12/2025          | Tarurendra | v1.25.12.7     |
+| TC-003       | Tap on the jurisdiction tab, all corresponding jurisdiction names appears in a drop down | User on Query Page | 1. Go to the login<br>2. Check the Query Page<br>3. Click on the jurisdiction tab<br>4. You can see the dropdown with names | All Jurisdiction names are visible| Successfully | None            | Release 10.0   |11/12/2025          | Tarurendra | v1.25.12.7    |
+| TC-004       | Test modal in light theme, dark theme, and dim theme modes| User on Query Page | 1. Go to the login<br>2. Check the Query Page<br>3. To change the theme into light theme, dark theme, and dim  <br>4. You can see the color | Clear visible in light theme, dark theme, and dim | Successfully | None            | Release 10.0   |11/12/2025    | Tarurendra | v1.25.12.7   |
+| TC-005       | Click on codes and preferences, user role, and adopted codes should be visible | User on Query Page | 1. Go to the login<br>2. Check the Query Page<br>3. Search any query after that  <br>4. On the right corner, select the codes and preferences  | Option to change User role as well as adopted codes are visible  | fail | Not visible on mobile devices but visible in web view | Release 10.0   |11/12/2025          | Tarurendra | v1.25.12.7    |
+| TC-006       | After asking a query and then going to the sessions history tab or bookmarks tab and returning to the query page preserves the jurisdiction name| User on Query Page | 1. Go to the login<br>2. Check the Query Page<br>3. Search any query after that  <br>4. Go to sessions history tab or bookmarks tab and return to the query page | The jurisdiction name should appear correctly despite switching between tabs| fail | None | Release 10.0   |11/12/2025   | Tarurendra | v1.25.12.7   |
+| TC-007       | After asking a query and then going to the sessions history tab or bookmarks tab and returning to the query page| User on Query Page | 1. Go to the login<br>2. Check the Query Page<br>3. Search any query after that  <br>4. Go to sessions history tab or bookmarks tab and return to the query page | Ai giving response without any pause| Successfully | None | Release 10.0   |11/12/2025   | Tarurendra | v1.25.12.7   |
+| TC-008       | Stream reading error | User on Query Page | 1. Go to the login<br>2. Check the Query Page<br>3. Search any query after that  <br>4. Suddenly, we see a Stream reading error | AI gives a response without any error | fail | none | Release 10.0 | 11/12/2025 | Tarurendra | v1.25.12.7     |
