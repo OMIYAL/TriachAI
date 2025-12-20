@@ -20,6 +20,7 @@ This folder contains all test cases for the web version.
 | TC-010       | Verify Buy Queries Button | User is logged in | 1. Go to the login page<br>2. Enter your credentials<br>3. On the right side, there is a Profile icon; click it. <br>4. After that, click on My account | User is redirected to query purchase page | Successfully | none        | Release 11.0   |20/12/2025 | Tarurendra  | v1.25.12.18     |
 | TC-011       | Verify Available Additional Queries Count | User is logged in | 1. Go to the login page<br>2. Enter your credentials<br>3. On the right side, there is a Profile icon; click it. <br>4. After that, click on My account | Displays: “1 available” | Successfully | none        | Release 11.0   |20/12/2025 | Tarurendra  | v1.25.12.18     |
 | TC-012       | Verify Available Additional Queries Count | User is logged in | 1. Go to the login page<br>2. Enter your credentials<br>3. On the right side, there is a Profile icon; click it. <br>4. After that, click on My account | “0 total purchased • Expires monthly with plan renewal” | Fail | none        | Release 11.0   |20/12/2025 | Tarurendra  | v1.25.12.18     |
+| TC-013       | Verify Data Accuracy After Query Usage | User is logged in | 1. Go to the login page<br>2. Enter your credentials<br>3. On the right side, there is a Profile icon; click it. <br>4. After that, click on My account | Remaining queries decrement correctly | Successfully | none        | Release 11.0   |20/12/2025 | Tarurendra  | v1.25.12.18     |
 
 
 
