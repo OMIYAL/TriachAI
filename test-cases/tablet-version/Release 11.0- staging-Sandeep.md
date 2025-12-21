@@ -20,5 +20,8 @@ This folder contains all test cases for the tablet version.
 | TC-009 | Tenant Visibility of Upgraded Plan | Admin upgrade completed | 1. Perform admin upgrade (from Test Case 8).<br>2. Log in as the affected tenant.<br>3. Navigate to subscription/dashboard page.<br>4. Attempt premium-only features (e.g., higher query limits). | Dashboard shows \"Premium\" plan; tenants can use enhanced features (e.g., more queries) without issues. | Successful | none | Release 10.0 | 20/12/25 | Sandeep | v1.25.12.18 |
 | TC-010 | Admin Permission Management for Tenants | Admin account prepared to change permissions | 1. As admin, revoke all permissions for a tenant.<br>2. Grant limited permissions (e.g., query submission only).<br>3. Log in as the tenant and test actions.<br>4. Verify functionality. | Tenant loses broad access but retains granted permissions;. | Successful | none | Release 10.0 | 20/12/25 | Sandeep | v1.25.12.18 |
 | TC-011 | Network Timeout During Payment Processing | 1. Tenant logged in.<br>| 1. Initiate add-on purchase as a tenant.<br>2. Switch of internet while payment.<br>. | It says your transaction may have been success ; It Shows a message Your internet connection is unstable, your transaction may have been processed; | Successful | | Release 10.0 |20/12/25 |Sandeep | v1.25.12.18 |
+| **TC-012** | Plan Downgrade for Active Tenant | 1. Admin access available.<br>2. Tenant currently active on Premium plan. | 1. Ensure Existing in premium plan( existing Test Case 8).<br>2. downgrade to starter.<br>3. Check Action | Downgrade applies immediately; excess queries fail with upgrade prompt;| fail | | Release 10.0 |20/12/25 |Sandeep |v1.25.12.18 |
+
+
 """
 
