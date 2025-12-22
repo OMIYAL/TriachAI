@@ -22,8 +22,8 @@
 | #74   | TC-041       | High     | “Response Preference” During AI Response Causes Page Refresh | Close   | @dev1       | When the user searches a query, and the AI is generating a response, changing the Response Preference (7 available options) during the response sometimes refreshes the entire page unexpectedly. |
 | #77   | TC-042       | Medium  | Skip, Back, and Next buttons malfunction in Welcome Tour. | Open | @dev1 |  Welcome Tour |
 | #78   | TC-043       | Medium  | Plan Downgrade for Active Tenant (B2B) | Open | @dev1 | Downgrade applies immediately; excess queries fail with upgrade prompt; |
-| #79   | TC-044       | Medium  | Halfway Query Interrupt (Queries Check) (B2C)  | @dev1 | The interrupted query does not deduct a credit; the quota remains unchanged. |
-| #80   | TC-045       | Medium  | Degrade Plan (premium to starter) (B2C)  | @dev1 | Plan status shows will change to starter after 1month ,no change occurs. |
+| #79   | TC-044       | Medium  | Halfway Query Interrupt (Queries Check) (B2C)|Open  | @dev1 | The interrupted query does not deduct a credit; the quota remains unchanged. |
+| #80   | TC-045       | Medium  | Degrade Plan (premium to starter) (B2C)|Open  | @dev1 | Plan status shows will change to starter after 1month ,no change occurs. |
 
 ## Test Execution Overview
 
