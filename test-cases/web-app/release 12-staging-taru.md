@@ -1,0 +1,12 @@
+# Web Test Cases
+
+This folder contains all test cases for the web version.
+
+# Test Scenario Template
+
+# Test Scenarios for [Feature/Module Name]
+
+| Test Case ID | Test Description | Prerequisites | Test Steps | Expected Result | Status     | Remark          | Release Cycle | Test Execution Date | Test Executed By | Version Number|
+|--------------|------------------|--------------|------------|----------------|------------|-----------------|---------------|--------------------|----------------------|------------   |                
+| TC-001       | Contact Sales | Landing Page | 1. Go to the landing page<br>2. Scroll down<br>3. Contact Sales  | Email will appear| Successfully | none        | Release 12.0   |30/12/2025          | Tarurendra  | v1.25.12.24    |
+| TC-002       | Completion Message Not Visible in Dark Mode | User is logged in | 1. Go to the landing page<br>2. Click Sign In<br>3. Welcome tour will appear  | The completion message text should be clearly visible and readable in Dark Mode.| Fail | none        | Release 12.0   |30/12/2025          | Tarurendra  | v1.25.12.24     |
