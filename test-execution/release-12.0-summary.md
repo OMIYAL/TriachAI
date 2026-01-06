@@ -1,6 +1,6 @@
-# Release 11.0 Bug and Test Summary
+# Release 12.0 Bug and Test Summary
 
-**Release Milestone:** Release 11.0  
+**Release Milestone:** Release 12.0  
 **Date:** 2025-12-22
 **Test Lead:** @yourusername  
 
