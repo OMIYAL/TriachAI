@@ -1,7 +1,7 @@
 # Release 13.0 Bug and Test Summary
 
 **Release Milestone:** Release 13.0  
-**Date:** 2025-01-06
+**Date:** 2026-01-06
 **Test Lead:** @yourusername  
 
 ## Bug Summary
@@ -25,6 +25,8 @@
 | #79   | TC-044       | Medium  | Halfway Query Interrupt (Queries Check) (B2C)|Open  | @dev1 | The interrupted query does not deduct a credit; the quota remains unchanged. |
 | #80   | TC-045       | Medium  | Degrade Plan (premium to starter) (B2C)|Closed  | @dev1 | Plan status shows will change to starter after 1month ,no change occurs. |
 | #86   | TC-046       | High  | Tenant Not Displayed in URL for B2B| Open | @dev1 |  Tenant is not visible in the URL in the B2B application; manual tenant entry in the URL is required to make it work|
+| #85   | TC-047       | High  | Concurrent Login on Different Browsers – Query Detected Only Once| Open | @dev1 |  Query is detected only once when the same B2C, B2B account is used simultaneously on different browsers|
+
 
 ## Test Execution Overview
 
