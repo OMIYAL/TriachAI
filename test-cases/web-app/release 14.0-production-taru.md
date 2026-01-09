@@ -1,0 +1,21 @@
+# Web Test Cases
+
+This folder contains all test cases for the web version.
+
+# Test Scenario Template
+
+# Test Scenarios for [Feature/Module Name]
+
+| Test Case ID | Test Description | Prerequisites | Test Steps | Expected Result | Status     | Remark          | Release Cycle | Test Execution Date | Test Executed By | Version Number|
+|--------------|------------------|--------------|------------|----------------|------------|-----------------|---------------|--------------------|----------------------|------------   |                
+| TC-001       | Contact Sales | Landing Page | 1. Go to the landing page<br>2. Scroll down<br>3. Contact Sales  | Email will appear| Successfully | none        | Release 14.0   |09/01/2026          | Tarurendra  | v1.26.1.8   |
+| TC-002       | Completion Message Not Visible in Dark Mode | User is logged in | 1. Go to the landing page<br>2. Click Sign In<br>3. The welcome tour will appear  | The completion message text should be clearly visible and readable in Dark Mode.| Fail | none        | Release 14.0   |09/01/2026   | Tarurendra  | v1.26.1.8     |
+| TC-003       | Delay in Feedback Action (Like/Dislike) | User is logged in | 1. Go to the landing page<br>2. Click Sign In<br>3. Welcome tour will appear<br>4. Search query<br> 5. Give feedback  | The feedback action should be registered instantly.| Successfully | none        | Release 14.0   |09/01/2026  | Tarurendra  | v1.26.1.8    |
+| TC-004       | CONVERSATION_MET Visible in AI Response | User is logged in | 1. Go to the landing page<br>2. Click Sign In<br>3. Welcome tour will appear<br>4. Search query<br> 5. At last, we see this error.  | AI response should end cleanly with relevant content and follow-up suggestions.| Fail | none        | Release 14.0   |09/01/2026  | Tarurendra  | v1.26.1.8    |
+| TC-005       | Adopted Codes not visible in Web | User is logged in | 1. Go to the landing page<br>2. Click Sign In<br>3. Welcome tour will appear<br>4. Select any jurisdiction<br> 5. Click on  Codes & Preferences  | Adopted codes relevant to the selected jurisdiction should be displayed.| Successfully | none        | Release 14.0   |09/01/2026  | Tarurendra  | v1.26.1.8  |
+| TC-006       | Show password does not work| User is logged in | 1. Go to the landing page<br>2. Click on Register<br>3. Registration page open <br>4. Fill the password<br> 5. When we want to see the password  | the Password text should become visible (plain text) when the eye icon is clicked.| Fail | none        | Release 14.0   |09/01/2026  | Tarurendra  | v1.26.1.8|
+| TC-007       | Paused Session Resumes and Completes on Page Refresh | User is logged in | 1. Go to the landing page<br>2. Click on Sign In<br>3. Skip welcome tour<br>4. Search any query <br> 5. In mid stop the query and refresh the page  |The session should remain paused after refresh, and the AI response should not continue or complete unless explicitly resumed by the user. | Fail | none        | Release 14.0   |09/01/2026  | Tarurendra  |v1.26.1.8    |
+| TC-008       | Dark Mode Not Fully Applied to Jurisdiction Dropdown | User is logged in | 1. Go to the landing page<br>2. Click on Sign In<br>3. Skip welcome tour<br>4. Change light into dark mode <br> 5. Click on Jurisdiction |Entire dropdown (background, search box, list items) should follow consistent dark theme colors. | Fail | none        | Release 14.0   |09/01/2026  | Tarurendra  | v1.26.1.8    |
+| TC-009       | Tenant Not Displayed in URL for B2B | User is logged in | 1. Go to the landing page<br>2. Click on Sign In<br>3. In Sign In URL<br> |Tenant identifier should be automatically included in the URL | Fail | none        | Release 14.0   |09/01/2026  | Tarurendra  | v1.26.1.8     |
+| TC-010       | Concurrent Login on Different Browsers – Query Detected Only Once | User is logged in | 1. Go to the landing page<br>2. Click on Sign In<br>3. Skip tour<br>4. Search query |Queries searched from both browsers should be detected, processed, and counted separately. | Fail | none        | Release 14.0   |09/01/2026  | Tarurendra  | v1.26.1.8   |
+
