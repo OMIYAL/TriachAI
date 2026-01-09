@@ -29,6 +29,7 @@
 | #85   | TC-047       | High  | Concurrent Login on Different Browsers – Query Detected Only Once| Open | @dev1 |  Query is detected only once when the same B2C, B2B account is used simultaneously on different browsers|
 | #87   | TC-048       | Medium  | Bookmarked Queries Filter | Open | @dev1 |The filter functionality in the Bookmarked Queries section is not working. When a user applies any filter option, the bookmarked queries list does not update or change accordingly. |
 | #88   | TC-049       | Medium  | Session History Filter | Open | @dev1 |When a user filters by a date range that has no corresponding sessions, it does not filter out the existing sessions. |
+| #89   | TC-050       | Medium  | Session History Filter is not working | Open | @dev1 |The filter in the Session History section is inaccurate. When a user selects a specific start and end date, the session list does not update to show only the relevant queries specific to that date. |
 
 
 ## Test Execution Overview
