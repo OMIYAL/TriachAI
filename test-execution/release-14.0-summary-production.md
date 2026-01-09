@@ -28,6 +28,8 @@
 | #86   | TC-046       | High  | Tenant Not Displayed in URL for B2B| Open | @dev1 |  Tenant is not visible in the URL in the B2B application; manual tenant entry in the URL is required to make it work|
 | #85   | TC-047       | High  | Concurrent Login on Different Browsers – Query Detected Only Once| Open | @dev1 |  Query is detected only once when the same B2C, B2B account is used simultaneously on different browsers|
 | #87   | TC-048       | Medium  | Bookmarked Queries Filter | Open | @dev1 |The filter functionality in the Bookmarked Queries section is not working. When a user applies any filter option, the bookmarked queries list does not update or change accordingly. |
+| #88   | TC-049       | Medium  | Session History Filter | Open | @dev1 |When a user filters by a date range that has no corresponding sessions, it does not filter out the existing sessions. |
+
 
 ## Test Execution Overview
 
