@@ -31,6 +31,7 @@
 | #88   | TC-049       | Medium  | Session History Filter | Open | @dev1 |When a user filters by a date range that has no corresponding sessions, it does not filter out the existing sessions. |
 | #89   | TC-050       | Medium  | Session History Filter is not working | Open | @dev1 |The filter in the Session History section is inaccurate. When a user selects a specific start and end date, the session list does not update to show only the relevant queries specific to that date. |
 | #90   | TC-051       | Medium  | Welcome tour issue | Open | @dev1 |In the Welcome Tour, after logging in, the tour is not visible after 4th step. After the user progresses through the first 4 steps, clicking the Next button causes the tour navigation (Next/Back buttons) to disappear,with the user stuck without a way to proceed or exit. |
+| #91   | TC-052       | Medium  | Developer Portal Open | Open | @dev1 |After payment failure, clicking the back button redirects to the Developer Portal page |
 
 
 ## Test Execution Overview
