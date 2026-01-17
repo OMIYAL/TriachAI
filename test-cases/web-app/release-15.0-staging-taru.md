@@ -8,7 +8,6 @@ This folder contains all test cases for the web version.
 
 | Test Case ID | Test Description | Prerequisites | Test Steps | Expected Result | Status     | Remark          | Release Cycle | Test Execution Date | Test Executed By | Version Number|
 |--------------|------------------|--------------|------------|----------------|------------|-----------------|---------------|--------------------|----------------------|------------   |                
-
 | TC-001       | Completion Message Not Visible in Dark Mode | User is logged in | 1. Go to the landing page<br>2. Click Sign In<br>3. The welcome tour will appear  | The completion message text should be clearly visible and readable in Dark Mode.| Fail | none        | Release 14.0   |09/01/2026   | Tarurendra  |v1.26.1.13   |
 | TC-002       | CONVERSATION_MET Visible in AI Response | User is logged in | 1. Go to the landing page<br>2. Click Sign In<br>3. Welcome tour will appear<br>4. Search query<br> 5. At last, we see this error.  | AI response should end cleanly with relevant content and follow-up suggestions.| Fail | none        | Release 14.0   |09/01/2026  | Tarurendra  | v1.26.1.13   |
 | TC-003       | Show password does not work| User is logged in | 1. Go to the landing page<br>2. Click on Register<br>3. Registration page open <br>4. Fill the password<br> 5. When we want to see the password  | the Password text should become visible (plain text) when the eye icon is clicked.| Fail | none        | Release 14.0   |09/01/2026  | Tarurendra  | v1.26.1.13|
