@@ -1,6 +1,6 @@
 # Tablet Test Cases
 
-This folder contains all test cases for the web version.
+This folder contains all test cases for the tablet version.
 
 # Test Scenario Template
 
