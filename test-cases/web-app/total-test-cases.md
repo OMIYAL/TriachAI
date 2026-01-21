@@ -66,3 +66,14 @@ Test accordion expand/collapse functionality
 # 34.
 Switch jurisdictions
 # 35.
+Guide tour opens
+# 36.
+Tap on the jurisdiction tab, and all corresponding jurisdiction names appear in a drop-down
+# 37.
+Click on codes and preferences, the user role, and adopted codes should be visible
+# 38.
+After asking a query and then going to the sessions history tab or bookmarks tab and returning to the query page, preserves the jurisdiction name
+# 39.
+Stream reading error
+# 40.
+Welcome, Tour Navigation Buttons Not Working Properly
