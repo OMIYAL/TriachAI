@@ -77,3 +77,56 @@ After asking a query and then going to the sessions history tab or bookmarks tab
 Stream reading error
 # 40.
 Welcome, Tour Navigation Buttons Not Working Properly
+# 41.
+Verify Subscription Page Loads Successfully
+# 42.
+Verify Plan Change Scheduled Banner
+# 43.
+Verify Current Subscription Plan Status
+# 44.
+Verify Change Plan Button
+# 45.
+Verify Current Plan Indicator
+# 46.
+Verify Monthly Queries Section Visibility
+# 47.
+Verify the Remaining Monthly Queries Count
+# 48.
+Verify Monthly Query Usage Text
+# 49.
+Verify Additional Queries Section
+# 50.
+Verify Buy Queries Button
+# 51.
+Verify Available Additional Queries Count
+# 52.
+Verify Data Accuracy After Query Usage
+# 53.
+Verify Change Plan Page Loads Successfully
+# 55.
+Verify Plan Change Scheduled Banner
+# 54.
+Verify Retain Premium Button
+# 55.
+Verify Free Plan Card Details
+# 56.
+Verify Premium Plan Card Details
+# 57.
+Verify Current Plan Badge
+# 58.
+Verify Scheduled Status on Free Plan
+# 59.
+Verify Current Subscription Plan Visibility
+# 60.
+Verify Plan Change Restriction Message
+# 61.
+Verify Absence of Change Plan Button(b2b)
+# 62.
+Verify Purchase Restriction Message(b2b)
+# 63.
+Verify Role-Based Access Control (b2b admin)
+# 64.
+Show Monthly Queries for New Starter Signup
+# 65.
+Upgrade Prompt After Exhausting Queries
+
