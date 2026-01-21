@@ -129,4 +129,10 @@ Verify Role-Based Access Control (b2b admin)
 Show Monthly Queries for New Starter Signup
 # 65.
 Upgrade Prompt After Exhausting Queries
+# 66.
+Contact Sales
+# 67.
+Show password 
+# 68.
+Paused Session
 
