@@ -36,6 +36,33 @@ Login Input Fields
 # 18.
 Register Input Fields
 # 19.
-
-
-
+Request Invitation
+# 20.
+See Live Demo
+# 21.
+Schedule Expert Call
+# 22.
+See Demo
+# 23.
+Test modal in light theme, dark theme, and dim theme modes
+# 24.
+Check that user profile pictures display correctly
+# 25.
+Test chat input responsiveness on phones
+# 26.
+Bookmark a query
+# 27.
+Navigate to the query from history
+# 29.
+Navigation Skips
+# 30.
+Recommended followup 
+# 31
+Click the "View Codes & Preferences" button in the toolbar
+# 32.
+Verify the "Adopted Codes" section is visible
+# 33.
+Test accordion expand/collapse functionality
+# 34.
+Switch jurisdictions
+# 35.
