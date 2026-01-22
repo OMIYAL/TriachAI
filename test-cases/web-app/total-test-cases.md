@@ -135,4 +135,7 @@ Contact Sales
 Show password 
 # 68.
 Paused Session
-
+# 69.
+New Advisory Session
+# 70.
+Codes & Preferences,  Session History, and Collaboration
