@@ -139,3 +139,5 @@ Paused Session
 New Advisory Session
 # 70.
 Codes & Preferences,  Session History, and Collaboration
+# 71.
+Navagation
