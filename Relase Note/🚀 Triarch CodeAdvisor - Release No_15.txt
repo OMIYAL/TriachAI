@@ -1,0 +1,50 @@
+🚀 Triarch CodeAdvisor - Release Notes
+Release Date: January 26, 2026
+Version: UI Fixes + Onboarding Improvements
+Branch: master
+In Staging -  v1.26.1.26
+
+📣 For End Users
+
+🛠️ Bug Fixes & Improvements
+
+🔍 Search Bar Visibility
+Issue: Search bar remained dark and difficult to read in certain themes.
+
+Fix: Adjusted styling to ensure proper contrast in both light and dark modes.
+
+Benefit: Clearer visibility and consistent user experience across themes.
+
+🎓 Welcome Tour Issue
+Issue: Tour steps occasionally failed to display or overlapped with page elements(Tablet).
+
+Fix: For Mobile and Tablet Welcome Tour now off.
+
+
+📑 Session History Filter
+Issue: Session history filter was not functioning correctly, showing irrelevant sessions.
+
+Fix: Corrected filtering logic to ensure only user-specific sessions are displayed.
+
+Benefit: Accurate session tracking and improved privacy.
+
+📌 Bookmarked Queries Filter
+Issue: Bookmarked queries were not properly filtered by user.
+
+Fix: Implemented user-specific filtering for bookmarked queries.
+
+Benefit: Personalized query management with secure isolation.
+
+🌙 Completion Message in Dark Mode
+Issue: Completion messages were not visible in dark mode due to color contrast.
+
+Fix: Updated message styling with theme-aware colors.
+
+Benefit: Clear visibility of completion messages in all modes.
+
+📝 Text Overlap
+Issue: Certain UI elements overlapped text in dropdowns and completion messages(Mobile).
+
+Fix: 
+
+Benefit: 
