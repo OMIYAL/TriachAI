@@ -26,6 +26,9 @@
 | #105   | TC-058       | Medium  | Preimum highlight feature  | Open | @dev1 |Preimum highlight feature|
 | #106   | TC-059       | Medium  | In Mobile its working fine, but now the overlap of text is in Desktop.  | Open | @dev1 |In Mobile its working fine, but now the overlap of text is in Desktop.|
 | #107   | TC-060       | Medium  | the jurisdiction issue and not in alphabet order  | Open | @dev1 |the jurisdiction issue and not in alphabet order|
+| #108   | TC-061       | Medium  | the payment history feature in the my account tab below subscription.  | Open | @dev1 |the payment history feature in the my account tab below subscription.|
+| #109   | TC-062       | Medium  | Recommended Follow-Up Questions Not Displaying in AHJ   | Open | @dev1 |Recommended Follow-Up Questions Not Displaying in AHJ |
+
 
 
 
