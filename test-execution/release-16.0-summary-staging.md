@@ -20,6 +20,14 @@
 | #91   | TC-052       | Medium  | Developer Portal Open | Open | @dev1 |After payment failure, clicking the back button redirects to the Developer Portal page |
 | #92   | TC-053       | Medium  | Remember me  | Open | @dev1 |Remember me - when you slide it, the circle within the bar disappears.|
 | #100   | TC-054       | Medium  | Developer Mode Opens After Logout from External Login Page  | Open | @dev1 |When a user logs in via External Login and navigates to the external authentication page, clicking Logout unexpectedly opens Developer Mode.|
+| #102   | TC-055       | Medium  | External login  | Open | @dev1 |When a user logs in via External Login.|
+| #103   | TC-056       | Medium  | QueryCounter  | Open | @dev1 |QueryCounter|
+| #104   | TC-057       | Medium  | Tenant Name Below QueryCounter  | Open | @dev1 |Tenant Name Below QueryCounter|
+| #105   | TC-058       | Medium  | Preimum highlight feature  | Open | @dev1 |Preimum highlight feature|
+| #106   | TC-059       | Medium  | In Mobile its working fine, but now the overlap of text is in Desktop.  | Open | @dev1 |In Mobile its working fine, but now the overlap of text is in Desktop.|
+| #107   | TC-060       | Medium  | the jurisdiction issue and not in alphabet order  | Open | @dev1 |the jurisdiction issue and not in alphabet order|
+
+
 
 
 
