@@ -26,9 +26,11 @@
 | #105   | TC-058       | Medium  | Preimum highlight feature  | Open | @dev1 |Preimum highlight feature|
 | #106   | TC-059       | Medium  | In Mobile its working fine, but now the overlap of text is in Desktop.  | Open | @dev1 |In Mobile its working fine, but now the overlap of text is in Desktop.|
 | #107   | TC-060       | Medium  | the jurisdiction issue and not in alphabet order  | Open | @dev1 |the jurisdiction issue and not in alphabet order|
-| #108   | TC-061       | Medium  | the payment history feature in the my account tab below subscription.  | Open | @dev1 |the payment history feature in the my account tab below subscription.|
+| #108   | TC-061       | Medium  | the payment history feature in the my account tab below the subscription.  | Open | @dev1 |the payment history feature in the my account tab below subscription.|
 | #109   | TC-062       | Medium  | Recommended Follow-Up Questions Not Displaying in AHJ   | Open | @dev1 |Recommended Follow-Up Questions Not Displaying in AHJ |
-
+| #110   | TC-063       | Medium  | Missing Space in “Session History” Text  | Open | @dev1 |Missing Space in “Session History” Text|
+| #111   | TC-064       | Medium  | Email Notification Not Sent on Tenant User Creation(b2b)  | Open | @dev1 |Email Notification Not Sent on Tenant User Creation|
+| #112   | TC-065       | Medium  | Verification Emails Delivered to Spam Folder(b2b) | Open | @dev1 |Verification Emails Delivered to Spam Folder|
 
 
 
