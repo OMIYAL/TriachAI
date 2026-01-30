@@ -18,5 +18,6 @@ This folder contains all test cases for the web version.
 | TC-008       | Developer Mode Opens After Logout from External Login Page | User is logged in | 1. Go to the landing page<br>2. Click on Sign In<br>3. Click Profile<br>4. Then click on External Logins<br>5. Click on log out|Home/Landing page | Fail | none        | Release 15.0   |20/01/2026  | Tarurendra  | v1.26.1.14   |
 | TC-009       | Password Strength / Requirement Not Displayed(Admin) | User is logged in | 1. Go to the landing page<br>2. Click on Sign In<br>3. Click on Administration<br>4. Click on Identity management<br>5. Click on Users-Click on New User | Fail | none        | Release 15.0   |20/01/2026  | Tarurendra  | v1.26.1.14   |
 | TC-010       | the jurisdiction issue and not in alphabet order  | User is logged in | 1. Go to the landing page<br>2. Click on Sign In<br>3. Click on Jurisdiction<br>4. dropdown appear5. see | Successful | none        | Release 17.0   |30/01/2026  | Tarurendra  |  v1.26.1.29   |
+| TC-011       | Tour (1-8)  | User is logged in | 1. Go to the landing page<br>2. Click on Sign In<br>3. Welcome Tour appears <br>4. Click next 5. see | Successful | none        | Release 17.0   |30/01/2026  | Tarurendra  |  v1.26.1.29   |
 
 
