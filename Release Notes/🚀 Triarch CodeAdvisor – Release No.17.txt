@@ -1,0 +1,35 @@
+🚀 Triarch CodeAdvisor – Release Notes
+
+Release Date: January 30, 2026
+Version:  v1.26.1.29
+Environment: Staging
+
+
+📣 For End Users
+
+🛠️ Bug Fixes & Enhancements
+
+🎓 Welcome Tour Enhancements
+
+Added 2 new steps to the Welcome Tour to improve first-time user guidance.
+
+🌍 Jurisdiction Selection Issue
+
+Fixed an issue where jurisdiction were not displayed in alphabetical order.
+Jurisdiction list is now consistently sorted for easier discovery and selection.
+
+📑 Session History Filter
+
+Fixed an issue where the Session History filter returned inconsistent or incorrect results.
+Filtering logic has been updated to ensure accurate and relevant session data.
+
+📱 Text Overlap Fixes (Mobile & Desktop)
+
+Fixed text overlapping issues across multiple UI components.
+Improved responsiveness and spacing for both mobile and desktop views.
+
+✅ Overall Impact
+
+Clearer and more structured onboarding experience.
+Correct and reliable jurisdiction handling.
+Improved usability and readability across devices.
