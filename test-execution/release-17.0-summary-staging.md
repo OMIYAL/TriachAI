@@ -27,7 +27,8 @@
 | #110   | TC-063       | Medium  | Missing Space in “Session History” Text  | Open | @dev1 |Missing Space in “Session History” Text|
 | #111   | TC-064       | Medium  | Email Notification Not Sent on Tenant User Creation(b2b)  | Open | @dev1 |Email Notification Not Sent on Tenant User Creation|
 | #112   | TC-065       | Medium  | Verification Emails Delivered to Spam Folder(b2b) | Open | @dev1 |Verification Emails Delivered to Spam Folder|
-| #89   | TC-050       | Medium  | Session History Filter is not working | Close | @dev1 |The filter in the Session History section is inaccurate. When a user selects a specific start and end date, the session list does not update to show only the relevant queries specific to that date. |
+| #89   | TC-066       | Medium  | Session History Filter is not working | Close | @dev1 |The filter in the Session History section is inaccurate. When a user selects a specific start and end date, the session list does not update to show only the relevant queries specific to that date. |
+| #113   | TC-067       | Medium  | Search Text Display Issue on Mobile & Desktop | Open | @dev1 |Verification Emails Delivered to Spam Folder|
 
 
 
