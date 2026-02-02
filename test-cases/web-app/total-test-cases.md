@@ -15,3 +15,4 @@
 | TC-09       |  Search any query | Verify Search any query and wait for response | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
 | TC-10       | Feedback icon | Verify Feedback icon, click on it, and a notification | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
 | TC-11       | Bookmark icon | Verify Feedback icon, click on it, and a notification | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
+| TC-12       |  New advisory session | Verify Search any query and wait for response | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
