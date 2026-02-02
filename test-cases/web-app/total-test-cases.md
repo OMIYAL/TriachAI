@@ -26,3 +26,5 @@
 | TC-20       | Forget Password | Verify | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>3. Then the login page opens <br>4. Fill user and password | It works or not|
 | TC-21       | Session history filter|Verify filter | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
 | TC-22       | Bookmarked Queries filter | Verify filter | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
+| TC-23       | Stop query | Verify stop button | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
+
