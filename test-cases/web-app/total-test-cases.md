@@ -21,4 +21,6 @@
 | TC-15       | Theme(Light,Semi-Dark,Dark,System) | Verify Navigation and change theme | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
 | TC-16       | Subscription and Payment | Verify Change plan and Payment Successful  | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br>6. My Account | It works or not|
 | TC-17       | Additional Queries(Buy Queries) | Verify Buy Queries | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br>6. My Account | It works or not|
-
+| TC-18       | Welcome Tour | Verify every step| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>3. Then the login page opens <br>4. Fill user and password | It works or not|
+| TC-19       | Registration | Verify confirm registration| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>3. Then the login page opens <br>4. Fill user and password | It works or not|
+| TC-20       | Forget Password | Verify | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>3. Then the login page opens <br>4. Fill user and password | It works or not|
