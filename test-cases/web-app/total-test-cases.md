@@ -4,5 +4,6 @@
 
 | Test Case ID | Test Description | Test Case | Test Steps | Expected Result | 
 |--------------|------------------|--------------|------------|----------------|             
-| TC-01       | Verify Sign In with valid data. | Landing on register page | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>3. Then the login page opens <br>4. Fill user and password | It works or not|
-| TC-02       | Remember me| Landing on register page | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>3. Then the login page open <br>4. Fill user and password <br>5. Click on Remember me box | It works or not|
+| TC-01       | Verify Sign In with valid data. | Landing page | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>3. Then the login page opens <br>4. Fill user and password | It works or not|
+| TC-02       | Remember me| Landing page | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>3. Then the login page open <br>4. Fill user and password <br>5. Click on Remember me box | It works or not|
+| TC-03       | Verify Landing page clickable buttons | Landing page | 1. Go to the https://staging.triarch.ai/<br>2. Check all buttons<br> | It works or not|
