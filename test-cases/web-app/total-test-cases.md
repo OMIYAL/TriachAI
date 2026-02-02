@@ -29,4 +29,10 @@
 | TC-23       | Stop query | Verify stop button | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
 | TC-24       | Dropdown arrow | Verify while search query its appear | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
 | TC-25       | Skip button | Verify when welcome tour appear click on SKIP| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>3. Then the login page opens <br>4. Fill user and password | It works or not|
+| TC-26       | Recommended followup questions | Verify Select any query 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>3. Then the login page opens <br>4. Fill user and password | It works or not|
+| TC-27       | Verify Subscription Page Loads Successfully | Verify Successful  | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br>6. My Account | It works or not|
+| TC-28       | Verify Plan Change Scheduled Banner | Verify Plan Change Scheduled  | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br>6. My Account | It works or not|
+| TC-29       | Verify Current Subscription Plan Status | Verify Status badge shows Active  | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br>6. My Account | It works or not|
+| TC-30       | Verify Monthly Query Usage Text | Verify “used this month • Resets every month”  | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br>6. My Account | It works or not|
+
 
