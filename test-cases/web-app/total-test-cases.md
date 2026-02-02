@@ -10,4 +10,5 @@
 | TC-04       | Navigation session history, bookmarked queries |Navigation | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
 | TC-05       | Session history |Verify Session history open and click any session | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
 | TC-06       | Bookmarked Queries | Verify Bookmarked Queries open and click any session | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
+| TC-07       | Jurisdiction | Verify Jurisdiction dropdown and select anyone | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
 
