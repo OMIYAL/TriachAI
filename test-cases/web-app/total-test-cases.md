@@ -28,4 +28,5 @@
 | TC-22       | Bookmarked Queries filter | Verify filter | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
 | TC-23       | Stop query | Verify stop button | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
 | TC-24       | Dropdown arrow | Verify while search query its appear | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open | It works or not|
+| TC-25       | Skip button | Verify when welcome tour appear click on SKIP| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>3. Then the login page opens <br>4. Fill user and password | It works or not|
 
