@@ -1,0 +1,29 @@
+🚀 Triarch CodeAdvisor – Release Notes
+
+Release Date: February 03, 2026
+Version: v1.26.2.2
+Environment: Staging
+
+🌟 New Features
+
+🔢 Query Counter
+
+Added a Query Counter to display the total number of queries available/used.
+Helps users easily track query usage at a glance.
+
+⭐ Premium Profile Indicator
+
+Introduced a Premium profile badge displayed near the user profile section.
+Clearly highlights premium users for better visibility and differentiation.
+
+🏢 Tenant Information Display
+
+Added Tenant name display in the top section of the interface.
+
+Improves clarity for users working across multiple tenants.
+
+✅ Overall Impact
+
+Better transparency of query usage.
+Clear identification of premium accounts.
+Improved context and awareness of the active tenant.
