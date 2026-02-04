@@ -1,0 +1,1078 @@
+# 🚀 Triarch CodeAdvisor - Release Notes
+**Release Date:** February 4, 2026  
+**Version:** Production Bug Fixes + Query Counter + Jurisdiction Improvements  
+**Branch:** `dev` → `master`  
+**Pull Request:** [#111](https://github.com/OMIYAL/Triarch/pull/111)
+
+---
+
+## 📣 For End Users
+
+### ✨ What's New
+
+This release brings significant improvements to your experience with **real-time query tracking**, **easier jurisdiction selection**, and **better onboarding**. We've fixed critical issues with sorting, filtering, and data accuracy to make the application more intuitive and reliable.
+
+#### 🔄 **Real-Time Query Counter**
+Your query usage now updates automatically without needing to refresh the page:
+
+- **Live Counter** - See your remaining queries update automatically after each question you ask
+- **Progress Bar** - Visual indicator shows how many queries you've used at a glance
+- **Monthly & Additional Queries** - Clearly see both your subscription queries and any extra packs you've purchased
+- **Buy More Button** - Easily purchase additional query packs when you're running low
+- **Premium Badge** - Professional and Enterprise users now have a gold star badge on their profile picture
+
+#### 📋 **Easier Jurisdiction Selection**
+Finding and selecting jurisdictions is now much simpler:
+
+- **Alphabetical Order** - States and cities are now sorted A to Z, making it easy to find what you need
+- **Two-Level Organization** - States appear first in alphabetical order, then cities/counties under each state are also alphabetically sorted
+- **Consistent Order** - Jurisdictions appear in the same order every time, no matter which device you use
+- **Cleaner Look** - Improved dropdown design with better contrast and readability
+- **Faster Performance** - Dropdown loads and displays results more quickly
+- **No More Searching** - Find your jurisdiction instantly instead of scrolling through a random list
+
+#### 🎨 **Visual Improvements**
+Cleaner interface with better use of screen space:
+
+- **Custom Footer** - Branded footer with TriArch AI information
+- **Query Usage Card** - Compact card at bottom of sidebar showing your query statistics
+- **Premium Badge** - Gold star badge on profile picture for Professional and Enterprise users
+- **Smart Sidebar** - Sidebar automatically collapses when you hover away, giving you more space
+- **More Screen Space** - Reduced padding around content areas so you can see more of your queries
+
+#### 🎓 **Better Onboarding Experience**
+We've improved the guided tour to help new users get started:
+
+- **Clear Focus** - Tour now clearly explains that ArchAI specializes in fire building code questions
+- **More Coverage** - Added tour steps for Session History and Bookmarked Queries features
+- **Desktop Only** - Tour only appears on larger screens where it works best (not on phones or small tablets)
+- **Visual Highlights** - Important buttons light up during the tour so you know exactly where to click
+- **Better Design** - Tour popups now match your chosen theme (light, dark, or dim mode)
+- **Smoother Flow** - Tour steps follow a more logical path through the main features
+
+#### 🔍 **Search & Filter Improvements**
+We've fixed several issues that were making it hard to find your queries:
+
+- **Bookmarked Queries** - You can now filter your bookmarks by jurisdiction (this wasn't working before)
+- **Date Filters** - Date range filtering in Session History now includes all queries from the dates you select
+- **Jurisdiction Filtering** - When filtering by jurisdiction, results are now accurate
+- **Case Sensitivity** - Searches now work regardless of whether you type in UPPERCASE, lowercase, or MiXeD case
+
+#### 🐛 **Data Corrections**
+We've improved the accuracy of building code information:
+
+- **District of Columbia** - Corrected classification to properly reflect its status as the U.S. capital
+- **NFPA 101 Life Safety Code** - Added adoption dates for over 50 jurisdictions that were missing
+- **Oklahoma** - Fixed spelling errors in jurisdiction names
+- **Fire Code Coverage** - Added NFPA 1 Fire Code adoption information for more complete coverage
+- **Data Import** - Fixed issues that were causing some jurisdiction data to import incorrectly
+
+### 🎯 Additional Improvements
+
+#### **Small but Useful Changes**
+- **Organization Name** - Your company name now appears at the top of the page (for organization users)
+- **Tour Messaging** - Tour now clearly states we focus on fire building codes
+- **Tour Display** - Tour only shows on desktop computers, not on phones or tablets
+- **Button Visibility** - Important buttons are easier to spot during the tour
+- **Mobile Layout** - Fixed text overlapping issues on smaller screens
+- **Input Field** - Fixed alignment so your text doesn't get hidden behind buttons when typing
+
+#### **Performance & Reliability**
+- **Instant Updates** - Query counter updates immediately after you ask a question
+- **Reliable Tracking** - Multiple systems ensure your query count is always accurate
+- **Separate Counters** - Your monthly queries and purchased additional queries are tracked separately for clarity
+
+#### **TypeScript Path Aliases**
+- **Developer Experience** - Added `@proxy/*` path alias in `tsconfig.json` for cleaner imports
+- **Consistency** - Matches existing `@shared/*` pattern for better code organization
+
+---
+
+## 👨‍💻 For Developers
+
+### 🔧 Technical Changes
+
+#### **Real-Time Query Counter Implementation** (PR #111 - Primary Feature)
+
+**New Service: QueryUsageService** (`angular/src/app/shared/services/query-usage.service.ts` +39 lines)
+
+**Purpose:** Centralized event broadcasting for query consumption across the application.
+
+**Key Features:**
+```typescript
+@Injectable({ providedIn: 'root' })
+export class QueryUsageService implements OnDestroy {
+  private queryConsumedSubject = new Subject<void>();
+  
+  // Observable that components subscribe to for updates
+  readonly queryConsumed$ = this.queryConsumedSubject.asObservable();
+  
+  // Call this after AI query submission
+  notifyQueryConsumed(): void {
+    this.queryConsumedSubject.next();
+  }
+}
+```
+
+**Benefits:**
+- ✅ Event-driven architecture (ABP best practice)
+- ✅ Decoupled components (publisher/subscriber pattern)
+- ✅ Root-level service (singleton instance)
+- ✅ Automatic cleanup with `OnDestroy` lifecycle hook
+
+---
+
+**Modified: AiChatService Event Publisher** (`angular/src/app/queries/queries.service.ts`)
+
+**Integration Point:** `processStreamLine()` method - triggers notification when SSE stream completes (`[DONE]` signal).
+
+```typescript
+// After AI response completes
+const lastMessage = currentMessages[currentMessages.length - 1];
+if (lastMessage && !lastMessage.isUser && lastMessage.isComplete) {
+  this.queryUsageService.notifyQueryConsumed(); // ⚡ Broadcast event
+}
+```
+
+**Why Here:**
+- 🎯 Accurate trigger point (query definitively consumed)
+- 🔒 Server-side validation already completed
+- 📊 Background job will increment counter within 5 seconds
+
+---
+
+**Modified: CustomSideMenuLayoutComponent** (`angular/src/app/shared/layouts/custom-side-menu-layout/`)
+
+**File Structure:**
+- **TypeScript:** `custom-side-menu-layout.component.ts` (+310 lines)
+- **HTML:** `custom-side-menu-layout.component.html` (+111 lines)
+- **SCSS:** `custom-side-menu-layout.component.scss` (+63 lines)
+
+**Key Changes:**
+
+1. **Replaced Default Layout** (ABP Theme Customization):
+```typescript
+// app.component.ts - Register custom layout
+this.replaceableComponents.add({
+  component: CustomSideMenuLayoutComponent,
+  key: eThemeLeptonXComponents.ApplicationLayout,
+});
+```
+
+2. **Event-Based Refresh** (Reactive Observables):
+```typescript
+// Create refresh trigger subject
+private queryUsageRefreshSubject = new BehaviorSubject<void>(undefined);
+
+// Base observable with API call
+const queryUsageData$ = this.queryUsageRefreshSubject.pipe(
+  switchMap(() => this.subscriptionService.getQueryUsageCountForCurrentUser()),
+  shareReplay({ bufferSize: 1, refCount: false }) // ✅ Cache latest result
+);
+
+// Subscribe to query consumed events
+this.queryUsageService.queryConsumed$
+  .pipe(takeUntilDestroyed(this.destroyRef))
+  .subscribe(() => {
+    // Wait 6 seconds for backend job processing
+    setTimeout(() => {
+      this.queryUsageRefreshSubject.next(); // ⚡ Trigger refresh
+    }, 6000);
+  });
+```
+
+3. **Polling Fallback** (Edge Cases):
+```typescript
+// Refresh every 5 minutes (multiple tabs, admin updates, etc.)
+interval(300000)
+  .pipe(takeUntilDestroyed(this.destroyRef))
+  .subscribe(() => {
+    this.queryUsageRefreshSubject.next();
+  });
+```
+
+4. **Premium Badge Detection**:
+```typescript
+this.isPremiumUser$ = queryUsageData$.pipe(
+  map(response => {
+    const planName = response?.currentPlan?.toLowerCase().trim();
+    return planName === 'premium' || planName === 'enterprise';
+  })
+);
+```
+
+5. **Sidebar Collapse Detection**:
+```typescript
+// Check if left sidebar is collapsed via DOM inspection
+private checkSidebarCollapsed(classes?: string[] | string): boolean {
+  const sidebarElement = document.querySelector('.lpx-sidebar-container') as HTMLElement;
+  return sidebarElement ? 
+    (sidebarElement.offsetWidth < 100 || window.getComputedStyle(sidebarElement).display === 'none') : 
+    false;
+}
+```
+
+**Benefits:**
+- ✅ Real-time updates (no page refresh needed)
+- ✅ Efficient API calls (shareReplay prevents duplicates)
+- ✅ Memory leak prevention (takeUntilDestroyed)
+- ✅ Graceful fallback (polling for edge cases)
+
+**Data Flow:**
+```
+User Submits Query
+       ↓
+AiChatService.sendMessage()
+       ↓
+Backend Processes (SSE Stream)
+       ↓
+SSE [DONE] Signal Received
+       ↓
+QueryUsageService.notifyQueryConsumed() ← EVENT EMITTED
+       ↓
+CustomSideMenuLayout receives event
+       ↓
+Wait 6 seconds for backend job
+       ↓
+queryUsageRefreshSubject.next() ← TRIGGER REFRESH
+       ↓
+API call: getQueryUsageCountForCurrentUser()
+       ↓
+All derived observables update (text$, percentage$, etc.)
+       ↓
+UI updates automatically via async pipe
+```
+
+---
+
+#### **Jurisdiction Sorting Optimization** (PR #111)
+
+**Modified Files:**
+- **Frontend:** `angular/src/app/queries/queries.component.ts` (+28 lines)
+- **Frontend:** `angular/src/app/queries/queries.component.html` (+4 lines)
+- **Frontend:** `angular/src/app/queries/queries.component.scss` (+31 lines)
+
+**Key Changes:**
+
+1. **Client-Side Alphabetical Sorting** (Parent + Child):
+```typescript
+// Sort parent IDs alphabetically by jurisdiction name
+const sortedParentIds = Array.from(parentIds).sort((a, b) => {
+  const parentA = idMap.get(a);
+  const parentB = idMap.get(b);
+  return (parentA?.name || '').localeCompare(parentB?.name || '');
+});
+
+// Sort children alphabetically by name
+const children = (childrenByParent.get(parentId) || [])
+  .sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+```
+
+2. **Server-Side Sorting** (API Request):
+```typescript
+this.jurisdictionService.getList({
+  maxResultCount: 1000,
+  skipCount: 0,
+  sorting: 'Name asc' // ⚡ Explicit backend sorting
+}).subscribe({...});
+```
+
+3. **Dropdown UI Improvements** (Bootstrap Semantic Colors):
+```scss
+.dropdown-menu.jurisdiction-dropdown-menu {
+  // Sticky search with proper background
+  .sticky-top.bg-body {
+    background-color: var(--bs-secondary-bg) !important; // ✅ Theme-aware
+    border-bottom-color: var(--bs-border-color);
+  }
+  
+  // Search input styling
+  input.form-control-sm {
+    background-color: var(--bs-secondary-bg);
+    color: var(--bs-body-color);
+    border-color: var(--bs-border-color);
+    
+    &:focus {
+      border-color: var(--bs-primary);
+      box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+    }
+    
+    &::placeholder {
+      color: var(--bs-secondary-color);
+      opacity: 0.65;
+    }
+  }
+  
+  // Hide scrollbar for cleaner look
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+}
+```
+
+**Benefits:**
+- ✅ Predictable sorting (consistent across platforms)
+- ✅ Faster user navigation (A-Z ordering)
+- ✅ Better accessibility (semantic color usage)
+- ✅ Theme compatibility (light/dark/dim modes)
+
+---
+
+#### **Backend Query Filtering Enhancements** (PR #111)
+
+**Modified Files:**
+- **Contracts:** `GetCodeQueriesInput.Extended.cs` (+5 lines)
+- **Application:** `CodeQueriesAppService.cs` (+2 lines)
+- **Domain:** `ICodeQueryRepository.cs` (+2 lines)
+- **Infrastructure:** `EfCoreCodeQueryRepository.cs` (+4 lines)
+
+**New Filter Property:**
+```csharp
+// GetCodeQueriesInput.Extended.cs
+public class GetCodeQueriesInput : GetCodeQueriesInputBase
+{
+    public Guid? JurisdictionId { get; set; } // ⚡ NEW: Filter by jurisdiction
+}
+```
+
+**Repository Implementation:**
+```csharp
+// EfCoreCodeQueryRepository.cs
+query = query
+    .WhereIf(jurisdictionId.HasValue, e => e.JurisdictionId == jurisdictionId);
+```
+
+**Benefits:**
+- ✅ More precise bookmarked query filtering
+- ✅ Consistent with session filtering patterns
+- ✅ Leverages ABP's `WhereIf` extension (best practice)
+
+---
+
+#### **Backend Feature Tracking Improvements** (PR #111)
+
+**Modified Files:**
+- **Domain:** `AppFeatureProvider.cs` (+18 lines)
+- **Application:** `SubscriptionAppService.cs` (+22 lines, -3 deletions)
+- **Background Jobs:** `ProcessQueryFeaturesJob.cs` (+18 lines)
+
+**New Feature Definitions:**
+```csharp
+// AppFeatureProvider.cs
+public static string AdditionalQueryCountUsageName = GroupName + ".AdditionalQueryCountUsage";
+public static string AdditionalQueryCountTotalPurchasedName = GroupName + ".AdditionalQueryCountTotalPurchased";
+```
+
+**Why Two Additional Query Features:**
+1. **AdditionalQueryCountUsage** (User-Scoped):
+   - Tracks individual user consumption of purchased queries
+   - Incremented by background job
+   - Used for per-user usage tracking (B2C)
+
+2. **AdditionalQueryCountTotalPurchased** (Tenant-Scoped):
+   - Tracks total purchased queries for organization (B2B)
+   - Set during payment success (never decremented)
+   - Used to display "total available" for tenant
+
+**Background Job Logic:**
+```csharp
+// ProcessQueryFeaturesJob.cs - Determine which usage counter to increment
+string usageFeatureName;
+if (args.QuotaFeatureName == AppFeatureDefinitionProvider.AdditionalQueryCountName)
+{
+    usageFeatureName = AppFeatureDefinitionProvider.AdditionalQueryCountUsageName; // ⚡ Track additional
+}
+else
+{
+    usageFeatureName = AppFeatureDefinitionProvider.MonthlyQueryCountUsageName; // ⚡ Track monthly
+}
+
+await _featureManager.SetAsync(
+    usageFeatureName,
+    newUsage.ToString(),
+    UserFeatureValueProvider.ProviderName,
+    args.UserId.ToString());
+```
+
+**Payment Success Page Update:**
+```csharp
+// Success.cshtml.cs - Update total purchased (B2B tracking)
+var newTotalPurchased = currentTotalPurchased == null
+    ? additionalQueryCount
+    : int.Parse(currentTotalPurchased) + additionalQueryCount;
+
+await _featureManager.SetForTenantAsync(
+    user.TenantId.Value,
+    AppFeatureDefinitionProvider.AdditionalQueryCountTotalPurchasedName,
+    newTotalPurchased.ToString());
+```
+
+**Benefits:**
+- ✅ Accurate B2B tenant-wide tracking
+- ✅ Proper B2C user-scoped consumption
+- ✅ Supports sidebar query counter display logic
+- ✅ No data loss during quota transfers
+
+---
+
+#### **Session Filtering Enhancements** (PR #111)
+
+**Modified Files:**
+- **Application:** `QuerySessionsAppService.Extended.cs` (+4 lines)
+- **Domain:** `IQuerySessionRepository.Extended.cs` (+4 lines)
+- **Infrastructure:** `EfCoreQuerySessionRepository.Extended.cs` (+22 lines)
+
+**New Filter Parameters:**
+```csharp
+// IQuerySessionRepository.Extended.cs
+Task<List<QuerySession>> GetListWithCreatorFilterAsync(
+    string? filterText = null,
+    string? sessionTitle = null,
+    bool? isActive = null,
+    Guid? projectId = null,
+    Guid? jurisdictionId = null,
+    Guid? creatorId = null,
+    DateTime? startDate = null, // ⚡ NEW
+    DateTime? endDate = null,   // ⚡ NEW
+    string? sorting = null,
+    int maxResultCount = int.MaxValue,
+    int skipCount = 0,
+    CancellationToken cancellationToken = default
+);
+```
+
+**Date Filtering Implementation:**
+```csharp
+// EfCoreQuerySessionRepository.Extended.cs
+if (startDate.HasValue)
+{
+    var startOfDay = startDate.Value.Date;
+    query = query.Where(e => e.CreationTime >= startOfDay);
+}
+if (endDate.HasValue)
+{
+    // Include all times on endDate itself (up to but not including next day at 00:00:00)
+    var endOfNextDay = endDate.Value.Date.AddDays(1);
+    query = query.Where(e => e.CreationTime < endOfNextDay);
+}
+```
+
+**Benefits:**
+- ✅ Precise date range filtering (inclusive start, inclusive end)
+- ✅ EF Core-compatible (avoids `.Date` translation issues)
+- ✅ Consistent with ABP audit property patterns
+
+---
+
+#### **Jurisdiction Data Corrections** (PR #111)
+
+**CSV Seeding File Updates:**
+
+1. **AdoptionCsvRecordMap - Fixed Typos** (`JurisdictionCodeAdoptionsDataSeedContributor.cs`):
+```csharp
+// BEFORE (incorrect CSV headers)
+Map(m => m.JurisdictionName).Name("Jursidction");      // ❌ Typo
+Map(m => m.AdoptedName).Name("Notes");                 // ❌ Wrong column
+Map(m => m.AmendmentSummary).Name("Ammendment Summary"); // ❌ Typo
+Map(m => m.AmendmentDocUrl).Name("Ammendment Doc URL");  // ❌ Typo
+
+// AFTER (corrected CSV headers)
+Map(m => m.JurisdictionName).Name("Jurisdiction");     // ✅ Fixed
+Map(m => m.AdoptedName).Name("AdoptedName");           // ✅ Fixed
+Map(m => m.AmendmentSummary).Name("Amendment Summary"); // ✅ Fixed
+Map(m => m.AmendmentDocUrl).Name("Amendment Doc URL");  // ✅ Fixed
+```
+
+2. **Jurisdiction Type Correction** (`Jurisdictions.csv`):
+```csv
+// BEFORE
+District of Columbia,DC,MUNICIPAL,District of Columbia
+
+// AFTER
+District of Columbia,DC,FEDERAL,District of Columbia  // ✅ Correct designation
+```
+
+3. **NFPA 101 Life Safety Code Additions** (`Code_Adoption_by_Jurisdiction.csv`):
+   - **Added:** 50+ missing NFPA 101 adoption records across all major jurisdictions
+   - **Examples:**
+     - Ohio: `NFPA 101 (2024),Ohio Life Safety Code 2024,,Expected Early 2026`
+     - California: `NFPA 101 (2024),California Life Safety Code 2024,,January 1, 2026`
+     - Illinois: `NFPA 101 (2024),Illinois Life Safety Code 2024,,January 1, 2025`
+
+4. **Name Corrections** (`Code_Adoption_by_Jurisdiction.csv`):
+```csv
+// BEFORE
+,IBC (2015),Oklahom Building Code 2015...  // ❌ Missing 'a'
+,IRC (2018),Oklahom Residential Code 2018... // ❌ Missing 'a'
+
+// AFTER
+,IBC (2015),Oklahoma Building Code 2015...  // ✅ Fixed
+,IRC (2018),Oklahoma Residential Code 2018... // ✅ Fixed
+```
+
+**Benefits:**
+- ✅ Accurate NFPA 101 Life Safety Code tracking
+- ✅ Proper jurisdiction classification (federal vs. municipal)
+- ✅ Data consistency for AI code reference lookups
+
+---
+
+#### **Tour Guide Content Updates** (PR #111)
+
+**Modified Files:**
+- **Service:** `queries-tour.service.ts` (+21 lines, -15 deletions)
+- **Constants:** `tour.constants.ts` (+2 lines)
+
+**Key Changes:**
+
+1. **Clarified Fire Code Focus**:
+```typescript
+// BEFORE
+content: 'This is your navigation menu where you can access all features of Triarch AI. The ArchAI Assistant is where you can ask building code questions...'
+
+// AFTER
+content: '...The ArchAI Assistant is where you can ask fire building code questions...' // ⚡ Explicit
+```
+
+2. **New Tour Steps**:
+```typescript
+{
+  title: 'Session History',
+  selector: TOUR_SELECTORS.sessionHistoryMenu,
+  content: 'Access all your previous conversations here. Click this menu item to review past queries...',
+  orientation: Orientation.Right,
+},
+{
+  title: 'Bookmarked Queries',
+  selector: TOUR_SELECTORS.bookmarkedQueriesMenu,
+  content: 'Found something useful? Save important queries here for quick access later...',
+  orientation: Orientation.Right,
+}
+```
+
+3. **Screen Size Adjustment**:
+```typescript
+// tour.constants.ts
+export const TOUR_MIN_SCREEN_SIZE = {
+  width: 1200,  // ✅ Bootstrap 'lg' breakpoint (was 1001 - arbitrary)
+  height: 708
+};
+```
+
+4. **Congratulations Popup Styling** (Theme-Aware):
+```typescript
+// BEFORE
+popup.style.cssText = 'position:fixed;...background:white;padding:2rem;...';
+
+// AFTER
+popup.style.cssText = '...background:var(--bs-body-bg);color:var(--bs-body-color);...border:2px solid var(--bs-primary);';
+```
+
+**Benefits:**
+- ✅ Clear user expectations (fire code focus)
+- ✅ Better feature discovery (session history, bookmarks)
+- ✅ Desktop-only tour (mobile UX preserved)
+- ✅ Theme-aware UI (dark mode support)
+
+---
+
+#### **Theme Customization Updates** (PR #111)
+
+**Modified Files:**
+- **Root Component:** `app.component.ts` (+28 lines, -10 deletions)
+- **Theme Overrides:** `_theme-overrides.scss` (+9 lines)
+
+**Key Changes:**
+
+1. **Footer Customization** (ABP Recommended Approach):
+```typescript
+// app.component.ts
+this.footerLinksService.setFooterInfo({
+  brandName: '',
+  brandUrl: '/',
+  authorName: `TriArch AI`,
+  authorUrl: '/',
+  links: []
+});
+```
+
+2. **Layout Replacement** (Custom Sidebar):
+```typescript
+// Replace entire application layout (not just footer component)
+this.replaceableComponents.add({
+  component: CustomSideMenuLayoutComponent,
+  key: eThemeLeptonXComponents.ApplicationLayout, // ⚡ Full layout control
+});
+```
+
+3. **Content Padding Reduction** (_theme-overrides.scss):
+```scss
+// Override ABP LeptonX default content padding
+.lpx-content-container .lpx-content {
+  padding: 0em 1em 1em !important; // ✅ More screen space for queries
+}
+```
+
+**Benefits:**
+- ✅ Follows ABP commercial theme customization guidelines
+- ✅ More maintainable (doesn't fight framework defaults)
+- ✅ Better screen space utilization
+- ✅ Professional branding integration
+
+---
+
+#### **Tenant Name Display** (PR #111)
+
+**Modified Files:**
+- **Component:** `queries.component.ts` (+28 lines)
+- **Layout:** `custom-side-menu-layout.component.html` (tenant name in topbar)
+
+**Implementation:**
+```typescript
+// queries.component.ts - Fetch tenant name for B2B users
+const tenantId = this.configState.getDeep('currentUser.tenantId');
+
+if (tenantId) {
+  this.tenantName$ = this.subscriptionService.getTenantName(tenantId).pipe(
+    tap(name => Logger.log('[QueriesComponent] Tenant name received:', name)),
+    catchError(error => {
+      Logger.error('[QueriesComponent] Error fetching tenant name:', error);
+      return of(null);
+    }),
+    takeUntil(this.destroy$)
+  );
+}
+```
+
+**UI Display:**
+```html
+<!-- custom-side-menu-layout.component.html - Topbar -->
+<div class="d-flex align-items-center gap-2 ms-3" *ngIf="tenantName$ | async as tenantName">
+  <i class="bi bi-building text-primary"></i>
+  <span class="fw-semibold text-muted">{{ tenantName }}</span>
+</div>
+```
+
+**Benefits:**
+- ✅ Clear organization context for B2B users
+- ✅ Reused logic from sidebar footer (DRY principle)
+- ✅ Graceful error handling (no UI disruption)
+- ✅ Hidden for host users (null check)
+
+---
+
+#### **TypeScript Configuration** (PR #111)
+
+**Modified File:** `angular/tsconfig.json` (+1 line)
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "@swimlane/*": ["node_modules/@swimlane/*"],
+      "@ngx-validate/core": ["node_modules/@ngx-validate/core"],
+      "@ng-bootstrap/ng-bootstrap": ["node_modules/@ng-bootstrap/ng-bootstrap"],
+      "@shared/*": ["src/app/shared/*"],
+      "@proxy/*": ["src/app/proxy/*"]  // ⚡ NEW: Cleaner imports for ABP proxies
+    }
+  }
+}
+```
+
+**Usage Example:**
+```typescript
+// BEFORE
+import { SubscriptionService } from '../../app/proxy/subscriptions';
+
+// AFTER
+import { SubscriptionService } from '@proxy/subscriptions'; // ✅ Cleaner
+```
+
+**Benefits:**
+- ✅ Shorter import paths
+- ✅ Better refactoring support
+- ✅ Consistent with @shared/* pattern
+
+---
+
+### 📦 Dependencies & Configuration
+
+**No New Dependencies:**
+- All changes use existing ABP Framework, Angular, and RxJS packages
+- No breaking changes to existing APIs
+
+**Configuration Changes:**
+- No `appsettings.json` or `environment.ts` changes required
+- Feature definitions added (backward compatible)
+
+---
+
+### 🏗️ Architecture Notes
+
+#### **ABP Best Practices Compliance:**
+
+1. **Event-Driven Architecture**
+   - `QueryUsageService` follows Observable Data Service pattern
+   - Decoupled publisher/subscriber communication
+   - Root-level singleton service
+
+2. **Reactive Programming**
+   - RxJS operators (`switchMap`, `shareReplay`, `takeUntilDestroyed`)
+   - Automatic memory cleanup (no manual unsubscribe)
+   - Observable streams for UI updates
+
+3. **Feature Management**
+   - Separate feature definitions for usage tracking
+   - Tenant-scoped vs. user-scoped features (B2B/B2C)
+   - Background job integration for async processing
+
+4. **Theme Customization**
+   - ABP-recommended `FooterLinksService` approach
+   - Layout replacement (not component override)
+   - Bootstrap semantic color usage
+
+5. **Lazy Loading & Performance**
+   - `shareReplay(1)` prevents duplicate API calls
+   - Event-driven updates (not constant polling)
+   - Minimal polling interval (5 minutes)
+
+---
+
+## 🧪 For QA/Testers
+
+### ✅ Testing Checklist
+
+#### **Real-Time Query Counter (Primary Feature)**
+- [ ] **Event-Based Update**
+  - [ ] Open ArchAI Assistant → Submit a query
+  - [ ] **Expected:** Sidebar query counter updates within 7-10 seconds (without page refresh)
+  - [ ] Check browser console for `[QueryUsageService] Query consumed event emitted`
+  - [ ] Verify `[SideMenuLayout] Query consumed event received` log appears
+  
+- [ ] **Multiple Queries**
+  - [ ] Submit 3 consecutive queries
+  - [ ] **Expected:** Counter decrements 3 times (one for each query)
+  - [ ] Progress bar updates accordingly
+  
+- [ ] **Polling Fallback**
+  - [ ] Open app in 2 browser tabs
+  - [ ] Submit query in Tab 1
+  - [ ] **Expected:** Tab 2 counter updates within 5 minutes (polling)
+  
+- [ ] **Premium Badge**
+  - [ ] Login as Professional plan user
+  - [ ] **Expected:** Gold star badge appears on avatar in sidebar
+  - [ ] Login as Free plan user
+  - [ ] **Expected:** No badge displayed
+
+- [ ] **Buy More Queries Button**
+  - [ ] Click "Buy More Queries" button in sidebar
+  - [ ] **Expected:** Redirects to payment page with correct tenant parameter (B2B) or without (B2C)
+  - [ ] Verify URL format: `/Product/Buy?t=<TenantName>` (B2B) or `/Product/Buy` (B2C)
+
+---
+
+#### **Jurisdiction Sorting**
+- [ ] **Alphabetical Parent Sorting**
+  - [ ] Open "Codes & Preferences" → Click jurisdiction dropdown
+  - [ ] **Expected:** States appear in A-Z order (Alabama, Alaska, Arizona...)
+  - [ ] Verify no random ordering on page refresh
+  
+- [ ] **Alphabetical Child Sorting**
+  - [ ] Expand a state with multiple cities (e.g., California)
+  - [ ] **Expected:** Cities sorted A-Z under parent state
+  - [ ] Verify Los Angeles, San Diego, San Francisco, San Jose appear in order
+  
+- [ ] **Dropdown UI**
+  - [ ] Check search input background color
+  - [ ] **Expected:** Uses `var(--bs-secondary-bg)` (theme-aware)
+  - [ ] Test dark mode → **Expected:** Input background adapts
+  - [ ] Verify scrollbar is hidden (cleaner look)
+
+---
+
+#### **Session History Filtering**
+- [ ] **Date Range Filter**
+  - [ ] Navigate to Session History
+  - [ ] Filter by date range (e.g., January 1-31, 2026)
+  - [ ] **Expected:** Only sessions created within range are displayed
+  - [ ] Try inclusive end date (e.g., Jan 31 23:59:59 included)
+  
+- [ ] **Jurisdiction Filter** (Bookmarked Queries)
+  - [ ] Navigate to Bookmarked Queries
+  - [ ] Select a jurisdiction from filter dropdown
+  - [ ] **Expected:** Only queries associated with that jurisdiction are shown
+  - [ ] Verify filter works with search text filter
+
+---
+
+#### **Tour Guide Updates**
+- [ ] **Fire Code Messaging**
+  - [ ] First-time user experience → Tour auto-starts
+  - [ ] **Expected:** Tour mentions "fire building code" (not generic "building code")
+  - [ ] Verify steps for Session History and Bookmarked Queries
+  
+- [ ] **Screen Size Threshold**
+  - [ ] Resize browser window to 1199px width
+  - [ ] **Expected:** Tour does NOT start (too small for desktop tour)
+  - [ ] Resize to 1200px+ width
+  - [ ] **Expected:** Tour starts automatically
+  
+- [ ] **Congratulations Popup**
+  - [ ] Complete entire tour
+  - [ ] **Expected:** Popup uses `var(--bs-body-bg)` and `var(--bs-body-color)` (theme-aware)
+  - [ ] Test in dark mode → **Expected:** Popup adapts to dark background
+
+---
+
+#### **Tenant Name Display**
+- [ ] **B2B User (Tenant Context)**
+  - [ ] Login as organization user
+  - [ ] **Expected:** Tenant name appears in topbar with building icon
+  - [ ] Verify name is correct (matches organization registration)
+  
+- [ ] **B2C User (Host Context)**
+  - [ ] Login as individual user
+  - [ ] **Expected:** Tenant name section does NOT appear in topbar
+  
+- [ ] **Error Handling**
+  - [ ] Simulate API error (network throttling)
+  - [ ] **Expected:** Tenant name gracefully hidden (no error message shown to user)
+  - [ ] Check browser console for error log
+
+---
+
+#### **Theme Customization**
+- [ ] **Sidebar Footer Query Card**
+  - [ ] Check sidebar footer displays query usage card
+  - [ ] **Expected:** Ultra-compact card with lightning icon, progress bar, usage text, and button
+  - [ ] Collapse sidebar → **Expected:** Card disappears
+  - [ ] Hover over collapsed sidebar → **Expected:** Card reappears
+  
+- [ ] **Content Padding**
+  - [ ] Navigate to ArchAI Assistant page
+  - [ ] **Expected:** More screen space (reduced padding from 2em to 1em)
+  - [ ] Verify queries panel doesn't feel cramped
+  
+- [ ] **Footer Info**
+  - [ ] Scroll to bottom of page
+  - [ ] **Expected:** Footer shows "TriArch AI" author name (not default ABP branding)
+
+---
+
+#### **Performance Testing**
+- [ ] **Query Counter API Calls**
+  - [ ] Open Network tab in DevTools
+  - [ ] Submit 3 queries in 1 minute
+  - [ ] **Expected:** 
+    - 1 API call on page load
+    - 3 API calls (one per query, 6-second delay each)
+    - 1 API call every 5 minutes (polling)
+  - [ ] Verify no duplicate calls (shareReplay working)
+  
+- [ ] **Jurisdiction Dropdown Loading**
+  - [ ] Measure time from click to full dropdown display
+  - [ ] **Expected:** < 500ms for 50-100 jurisdictions
+  - [ ] No visible lag on backend sorting
+
+---
+
+#### **Data Integrity (CSV Changes)**
+- [ ] **District of Columbia Classification**
+  - [ ] Admin panel → Jurisdictions list
+  - [ ] Search for "District of Columbia"
+  - [ ] **Expected:** Jurisdiction type is "FEDERAL" (not MUNICIPAL)
+  
+- [ ] **NFPA 101 Adoptions**
+  - [ ] Select jurisdictions: Ohio, California, Illinois
+  - [ ] Check code adoptions list
+  - [ ] **Expected:** NFPA 101 (Life Safety Code) appears with 2024/2025/2026 adoption dates
+  
+- [ ] **Oklahoma Name Fix**
+  - [ ] Select Oklahoma jurisdiction
+  - [ ] **Expected:** "Oklahoma Building Code 2015" and "Oklahoma Residential Code 2018" (not "Oklahom")
+
+---
+
+#### **Error Handling**
+- [ ] **Query Counter API Failure**
+  - [ ] Simulate network error (disconnect Wi-Fi during query submission)
+  - [ ] **Expected:** Counter shows last known value (no crash)
+  - [ ] Verify error logged in console
+  - [ ] Reconnect → **Expected:** Next polling interval updates counter
+  
+- [ ] **Tenant Name Fetch Failure**
+  - [ ] Simulate API error for tenant name
+  - [ ] **Expected:** Topbar continues to work (tenant name simply not shown)
+  - [ ] No error toast or UI disruption
+
+---
+
+#### **Cross-Browser Testing**
+- [ ] **Chrome** (primary browser)
+  - [ ] All features work as expected
+  
+- [ ] **Edge** (Chromium-based)
+  - [ ] Query counter updates
+  - [ ] Premium badge displays
+  
+- [ ] **Firefox**
+  - [ ] Sidebar collapse detection
+  - [ ] Theme variables work correctly
+
+---
+
+#### **Mobile Responsiveness**
+- [ ] **Query Counter Card (Mobile)**
+  - [ ] Resize to mobile viewport (< 768px)
+  - [ ] **Expected:** Query card hidden (sidebar collapses to mobile navbar)
+  
+- [ ] **Tour Guide (Mobile)**
+  - [ ] Resize to 1199px or smaller
+  - [ ] **Expected:** Tour does NOT auto-start (desktop-only feature)
+
+---
+
+### 📝 Documentation Added
+
+**New Documentation:**
+- `docs/development/QUERY_USAGE_DYNAMIC_UPDATE.md` (+163 lines)
+  - Architecture overview
+  - Event-driven workflow
+  - Troubleshooting guide
+  - Performance considerations
+
+**Key Sections:**
+1. **Architecture** - QueryUsageService, AiChatService, CustomSideMenuLayoutComponent integration
+2. **Data Flow** - Complete event propagation diagram
+3. **ABP Best Practices** - Service injection, reactive patterns, resource cleanup
+4. **Configuration** - How to adjust polling interval
+5. **Testing Checklist** - Verification steps for QA
+6. **Troubleshooting** - Common issues and solutions
+
+---
+
+## 🎯 Migration Notes
+
+### Database Changes
+**No Migrations Required** - All changes are application-level (UI, services, feature definitions)
+
+### Breaking Changes
+**None** - All changes are backward compatible
+
+### Feature Flags
+**New Feature Definitions** (Auto-Applied):
+- `CodeAdvisor.AdditionalQueryCountUsage` (default: "0")
+- `CodeAdvisor.AdditionalQueryCountTotalPurchased` (default: "0")
+
+**Existing Users:**
+- Features automatically initialized with default values
+- No data migration needed
+
+---
+
+## 🚀 Deployment Steps
+
+### 1. Backend Deployment
+```powershell
+# No migrations to run
+# Simply deploy updated DLLs
+
+# Verify feature definitions
+# Check Admin Panel → Settings → Features
+# Confirm AdditionalQueryCountUsage and AdditionalQueryCountTotalPurchased exist
+```
+
+### 2. Frontend Deployment
+```powershell
+cd angular
+
+# Install dependencies (no new packages, but verify)
+npm install
+
+# Build production
+npm run build:prod
+
+# Deploy to Azure/IIS
+# Copy contents of angular/dist/ to web server
+```
+
+### 3. Post-Deployment Verification
+- [ ] Login as B2B user → Verify tenant name in topbar
+- [ ] Submit query → Verify sidebar counter updates within 10 seconds
+- [ ] Check Premium badge for Professional/Enterprise users
+- [ ] Test jurisdiction dropdown sorting (A-Z order)
+- [ ] Verify tour guide shows "fire building code" messaging
+
+---
+
+## 📊 Performance Impact
+
+**API Call Changes:**
+- **Before:** 1 call on page load (static counter)
+- **After:** 
+  - 1 call on load
+  - 1 call per query (6-second delay)
+  - 12 calls/hour (5-minute polling fallback)
+  - **Total:** ~15-20 API calls per active user per hour (negligible load)
+
+**Frontend Bundle Size:**
+- **QueryUsageService:** +39 lines (~1 KB)
+- **CustomSideMenuLayoutComponent:** +484 lines (~15 KB including HTML/SCSS)
+- **Total Impact:** < 20 KB uncompressed (~5 KB gzipped)
+
+**Database Impact:**
+- **No additional queries** (uses existing ABP feature management tables)
+- **Feature reads:** Cached by ABP framework (minimal DB load)
+
+---
+
+## 🐛 Known Issues & Limitations
+
+### Known Issues
+1. **Query Counter Delay:**
+   - Counter updates 6-10 seconds after query submission (by design)
+   - Reason: Backend background job processes feature increment
+   - Workaround: None needed (user expectation is "shortly after query")
+
+2. **Premium Badge Edge Case:**
+   - Badge may not appear immediately after plan upgrade
+   - Workaround: Refresh page or wait for 5-minute polling interval
+
+### Limitations
+1. **Real-Time Updates:**
+   - Not true real-time (uses 6-second delay + 5-minute polling)
+   - Future enhancement: SignalR integration for instant updates
+
+2. **Mobile Tour:**
+   - Tour disabled on screens < 1200px width
+   - Reason: Mobile UI different enough to warrant separate tour (future work)
+
+---
+
+## 🎉 Summary
+
+This release delivers **production-ready query counter functionality** with **real-time updates**, **improved jurisdiction sorting**, and **enhanced theme customization**. The implementation follows ABP Framework best practices with event-driven architecture, reactive programming patterns, and proper resource management.
+
+**Key Highlights:**
+- ⚡ Real-time query counter with event-driven updates
+- 📋 Alphabetically sorted jurisdiction dropdown (A-Z)
+- 🎨 Professional theme customization with custom sidebar layout
+- 🏷️ Premium badge for Professional/Enterprise users
+- 🔧 Improved feature tracking (separate monthly vs. additional queries)
+- 📊 Tenant name display for B2B context awareness
+- 🎓 Enhanced tour guide with fire code focus
+- 🐛 Data corrections (District of Columbia, NFPA 101, Oklahoma typos)
+
+**Total Changes:**
+- **30+ files modified**
+- **1,300+ lines changed**
+- **Zero breaking changes**
+- **Zero new dependencies**
+
+---
+
+**Implementation Date:** February 4, 2026  
+**Developer:** GitHub Copilot + Human Review  
+**Architecture Pattern:** Event-Driven + Reactive Observables (ABP Standard)
