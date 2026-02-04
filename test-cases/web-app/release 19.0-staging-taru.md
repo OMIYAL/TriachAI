@@ -19,5 +19,5 @@ This folder contains all test cases for the web version.
 | TC-009       | Password Strength / Requirement Not Displayed(Admin) | User is logged in | 1. Go to the landing page<br>2. Click on Sign In<br>3. Click on Administration<br>4. Click on Identity management<br>5. Click on Users-Click on New User | strength|Fail | none        | Release 15.0   |20/01/2026  | Tarurendra  | v1.26.1.14   |
 | TC-010       | Real-Time Query Counter Not Updating  | User is logged in | 1. Go to the landing page<br>2. Click on Sign In<br>3. After login<br>4. See |The Query Counter should update in real time immediately after each query is submitted |Successful | none | Release 19.0   |04/01/2026  | Tarurendra  |v1.26.2.3   |
 | TC-011       | Tenant Information Display  | User is logged in | 1. Go to the landing page<br>2. Click on Sign In<br>3. After login, skip tour <br>4. See right side at top | Added Tenant name display in the top section of the interface.|Successful | none        | Release 18.0   |03/02/2026  | Tarurendra  | v1.26.2.2   |
-
+| TC-012       | Buy More Queries  | User is logged in | 1. Go to the landing page<br>2. Click on Sign In<br>3. After login<br>4. See |Rediredct to Buy Additional Queries |Successful | none | Release 19.0   |04/01/2026  | Tarurendra  |v1.26.2.3   |
 
