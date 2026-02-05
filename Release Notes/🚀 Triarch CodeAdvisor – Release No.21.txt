@@ -1,0 +1,23 @@
+🚀 Triarch CodeAdvisor – Release Notes
+Release Date: February 5, 2026 
+Release Date: February 05, 2026
+Version: v1.26.2.5
+Environment: Staging
+
+🐞 Bug Fixes
+
+Bookmarked Queries Not Displayed on Page 2 After Applying Jurisdiction Filter
+
+Fixed an issue where bookmarked queries were not displayed after applying a jurisdiction filter on the second page.
+Ensured bookmarked queries now load correctly across all paginated pages when filters are applied.
+
+Sessions Not Displayed on Page 2 After Applying Jurisdiction Filter
+
+Resolved an issue where sessions were not displayed on the second page after applying a jurisdiction filter.
+Ensured sessions now load and display consistently across all paginated pages when filters are active.
+
+✅ Impact
+
+Improved reliability of pagination + filtering behavior
+Ensures consistent visibility of bookmarked queries and sessions
+Enhances overall user experience when working with filtered data across pages
