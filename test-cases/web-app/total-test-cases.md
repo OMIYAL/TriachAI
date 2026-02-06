@@ -36,5 +36,6 @@
 | TC-30       | Verify Monthly Query Usage Text | Verify “used this month • Resets every month”  | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br>6. My Account | It works or not|
 | TC-31       | Verify query counter update | Verify Realtime update counter  | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 | TC-32       | Verify profile navigation | Verify navigation  | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-33       | Verify ArchAI Navigation Flow | Verify navigation  | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 
 
