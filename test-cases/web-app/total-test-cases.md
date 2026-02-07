@@ -55,6 +55,8 @@
 | TC-49       | Verify Contact Sales| Verify Email will appear| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 | TC-50       | Verify Show password| Verify the Password text should become visible (plain text) when the eye icon is clicked.| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 | TC-51       | Verify the jurisdiction in alphabetical order. | Verify alphabet order| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-52      | Verify Premium profile | Verify When we change from free to premium, then the profile icon changes| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-53      | Verify It gives an accurate time of the query session | Verify Session History 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 
 
 
