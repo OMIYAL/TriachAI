@@ -44,6 +44,12 @@
 | TC-38       | Verify Monthly Queries Section Visibility | Verify Section title “Monthly Queries” is visible| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 | TC-39       | Verify Monthly Query Usage Text | Verify used this month • Resets every month| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 | TC-40       | Verify Available Additional Queries Count | Verify Displays: “available”| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-41       | Verify Retain Premium Button | Verify Scheduled downgrade is cancelled| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-42       | Verify Free Plan| Verify Shows 5 AI queries/month| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-43       | Verify Scheduled Status on Free Plan| Verify Indicates downgrade is already planned| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-44       | Verify Plan Pricing Accuracy| Verify No pricing mismatch| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-45       | Verify behavior when Monthly Queries and Additional Queries are exhausted (0 remaining)| Verify You have exhausted your queries for this month.| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-46       | Verify When user search query| Verify You've used all your monthly queries and additional queries.| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 
 
 
