@@ -39,6 +39,8 @@
 | TC-33       | Verify ArchAI Navigation Flow | Verify navigation  | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 | TC-34       | Verify Tap on jurisdiction tab , all corresponding jurisdiction names appears in a drop down | Verify navigation  | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 | TC-35       | Verify Test modal in light dark theme, and dim theme modes query | Verify theme query appear  | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-36       | Verify After asking a query and then going to the sessions history tab or bookmarks tab and returning to query page | Verify The jurisdiction name should appear correctly despite switching between tabs  | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-37       | Verify Click on codes and preferences, user role, and adopted codes should be visible | Verify Option to change User role as well as adopted codes are visible | 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 
 
 
