@@ -52,6 +52,9 @@
 | TC-46       | Verify When user search query| Verify You've used all your monthly queries and additional queries.| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 | TC-47       | Verify behavior when Monthly Queries (0) and Additional Queries are exhausted (1 remaining)| Verify AI give response| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 | TC-48       | Verify New Starter queries completed| Verify You've used all your monthly queries| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-49       | Verify Contact Sales| Verify Email will appear| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-50       | Verify Show password| Verify the Password text should become visible (plain text) when the eye icon is clicked.| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-51       | Verify the jurisdiction in alphabetical order. | Verify alphabet order| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 
 
 
