@@ -50,6 +50,8 @@
 | TC-44       | Verify Plan Pricing Accuracy| Verify No pricing mismatch| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 | TC-45       | Verify behavior when Monthly Queries and Additional Queries are exhausted (0 remaining)| Verify You have exhausted your queries for this month.| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 | TC-46       | Verify When user search query| Verify You've used all your monthly queries and additional queries.| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-47       | Verify behavior when Monthly Queries (0) and Additional Queries are exhausted (1 remaining)| Verify AI give response| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-48       | Verify New Starter queries completed| Verify You've used all your monthly queries| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 
 
 
