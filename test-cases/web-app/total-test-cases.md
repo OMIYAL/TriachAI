@@ -57,9 +57,9 @@
 | TC-51       | Verify the jurisdiction in alphabetical order. | Verify alphabet order| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 | TC-52      | Verify Premium profile | Verify When we change from free to premium, then the profile icon changes| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
 | TC-53      | Verify It gives an accurate time of the query session | Verify Session History |1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
-| TC-54      | Verify star rating uses blue color (not yellow) | Verify Rating uses blue color| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
-| TC-55      | Verify Confirm all badges are blue/gray (no green/red/orange except for character count warnings) | Verify All badges are blue/gray| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
-| TC-56      | Verify Click accordion header| Verify Content expands smoothly| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | It works or not|
+| TC-54      | Verify star rating uses blue color (not yellow) | Verify Rating uses blue color| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> 6. Search query and last see feedback icon click on it | It works or not|
+| TC-55      | Verify Confirm all badges are blue/gray (no green/red/orange except for character count warnings) | Verify All badges are blue/gray| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> 6. Search query and last see feedback icon click on it | It works or not|
+| TC-56      | Verify Click accordion header| Verify Content expands smoothly| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> 6. Click on Codes & Preferences and see down Adopted Codes | It works or not|
 
 
 
