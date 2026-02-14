@@ -13,9 +13,9 @@
 | #69   | TC-036       | Medium     | Page Refreshes After Stopping Query| Open   | @dev1       | When a user stops an active query and selects another query, the entire page refreshes automatically, interrupting the workflow. |
 | #72   | TC-039       | Minor     | Stream reading error| Open   | @dev1       | When the user searches for any query, the system shows a “stream reading error” and fails to load the AI response properly. |
 | #79   | TC-044       | Medium  | Halfway Query Interrupt (Queries Check) (B2C)|Open  | @dev1 | The interrupted query does not deduct a credit; the quota remains unchanged. |
-| #91   | TC-052       | Medium  | Developer Portal Open | Open | @dev1 |After payment failure, clicking the back button redirects to the Developer Portal page |
+| #91   | TC-052       | Medium  | Developer Portal Open | Close | @dev1 |After payment failure, clicking the back button redirects to the Developer Portal page |
 | #92   | TC-053       | Medium  | Remember me  | Open | @dev1 |Remember me - when you slide it, the circle within the bar disappears.|
-| #100   | TC-054       | Medium  | Developer Mode Opens After Logout from External Login Page  | Open | @dev1 |When a user logs in via External Login and navigates to the external authentication page, clicking Logout unexpectedly opens Developer Mode.|
+| #100   | TC-054       | Medium  | Developer Mode Opens After Logout from External Login Page  | Close | @dev1 |When a user logs in via External Login and navigates to the external authentication page, clicking Logout unexpectedly opens Developer Mode.|
 | #102   | TC-055       | Medium  | External login |Close | @dev1 |When a user logs in via External Login.|
 | #103   | TC-056       | Medium  | QueryCounter  | Close | @dev1 |QueryCounter|
 | #104   | TC-057       | Medium  | Tenant Name Below QueryCounter  | Open | @dev1 |Tenant Name Below QueryCounter|
