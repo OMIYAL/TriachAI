@@ -1,0 +1,55 @@
+🚀 Triarch CodeAdvisor – Release Notes
+Release Date: February 14, 2026
+Version: v1.26.2.13
+Environment: Staging
+
+
+✨ New Features
+
+💳 Payment History
+
+Introduced a Payment History section to allow users to:
+
+View past transactions
+Track payment status
+Monitor billing records in one centralized location
+
+This improves transparency and provides better financial tracking for users.
+
+🔧 Enhancements
+
+🎨 Enhanced UI Visibility – Login, Register & Forgot Password
+
+Improved the visibility and styling of the following buttons:
+
+Login
+Register
+Forgot Password
+
+Enhancements include:
+
+Clear button styling (no longer appearing as plain text)
+Improved contrast and visual hierarchy
+Better user interaction and accessibility
+
+This ensures users can easily identify and interact with authentication options.
+
+🐞 Bug Fixes
+
+🔍 Search Text Display Issue (Mobile & Desktop)
+
+Fixed inconsistent or improper display of search text across mobile and desktop views
+Ensured correct alignment and visibility across screen sizes
+
+📝 Missing Space in “Session History” Text
+
+Resolved formatting issue where spacing was missing in the “Session History” label
+Ensured proper text rendering for improved readability
+
+✅ Impact
+
+Improved user experience in authentication flow
+Better UI clarity and accessibility
+Accurate search text rendering across devices
+Cleaner and more professional interface formatting
+Enhanced billing transparency through Payment History
