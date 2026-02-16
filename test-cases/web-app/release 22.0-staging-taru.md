@@ -17,7 +17,7 @@ This folder contains all test cases for the web version.
 | TC-007       |  Payment History | User is logged in | 1. Go to the landing page<br>2. Click on Sign In<br>3. Click My Account and then click  Payment History<br>4. Then, to check the history of payment|Open Payment History of every payment | Successful | none   | Release 22.0   |14/02/2026  | Tarurendra  |  v1.26.2.13  |
 | TC-008       | Enhance UI Visibility for Login, Register, and Forgot Password button | User is logged in | 1. Go to the landing page<br>2. Click on Sign/Register <br>3. Click on login<br>4. Click on forget password|Convert into clearly styled buttons | Successful | none   | Release 22.0   |14/02/2026  | Tarurendra  |  v1.26.2.13  |
 | TC-009       | Search Text Display Issue on Mobile & Desktop | User is logged in | 1. Go to the landing page<br>2. Click on Sign In <br>3. Search query area<br>4. Type any question and check it. |Search text should be clearly visible, properly aligned, and fully readable on both mobile and desktop screens. | Successful | none   | Release 22.0   |14/02/2026  | Tarurendra  |  v1.26.2.13  |
-
-
+| TC-010       | Payment History Filter Not Working | User is logged in | 1. Go to the landing page<br>2. Click on Sign In<br>3. Click My Account and then click  Payment History<br>4. Then, to check the filter of payment|Open filter Payment History of every payment | Fail | none   | Release 22.0   |16/02/2026  | Tarurendra  |  v1.26.2.13  |
+| TC-011       | Premium Payment Not Working | User is logged in | 1. Go to the landing page<br>2. Click on Sign In<br>3. Click My Account and then click  subscription<br>4. Then, click on change plan| payment | Fail | none   | Release 22.0   |16/02/2026  | Tarurendra  |  v1.26.2.13  |
 
 
