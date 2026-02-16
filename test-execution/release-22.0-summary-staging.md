@@ -32,7 +32,8 @@
 | #116   | TC-068       | Medium  | Bookmarked Queries Not Displayed After Applying Jurisdiction Filter on Page 2 | Close | @dev1 |Bookmarked Queries Filter Fails When Jurisdiction Is Selected After Navigating to Page 2|
 | #117   | TC-069       | Medium  | Menu and “+” Icon Not Displayed Properly on Mobile | Open | @dev1 |Menu and “+” Icon UI Misalignment / Not Visible on Mobile View|
 | #114   | TC-067       | Medium  | Real-Time Query Counter Not Updating| Close | @dev1 |Real-Time Query Counter Does Not Update Automatically(B2B, B2C)|
-
+| #119   | TC-070       | Medium  | Premium Payment Not Working| Open | @dev1 |Users are unable to complete the premium payment. The transaction does not process successfully.|
+| #120   | TC-071       | Medium  | Payment History Filter Not Working| Open | @dev1 |The Payment History filter is not functioning properly. When users apply filter criteria, the results do not update accordingly.|
 
 
 
