@@ -62,6 +62,7 @@
 | TC-56      | Verify Click accordion header| Verify Content expands smoothly| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> 6. Click on Codes & Preferences and see the Adopted Codes | successful or fail|
 | TC-57      | Verify dark theme to check all navigation| Verify all navigation| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> 6. Change the theme to dark mode, then check all navigation | successful or fail|
 | TC-58      | Verify semi-dark theme to check all navigation| Verify all navigation| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> 6. Change the theme to semi-dark mode, then check all navigation | successful or fail|
+| TC-59      | Verify Payment History and filter| Verify history and filter| 1. Go to the https://staging.triarch.ai/<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> 6. Click on the profile icon, then click on my account, and at last click on payment history | successful or fail|
 
 
 
