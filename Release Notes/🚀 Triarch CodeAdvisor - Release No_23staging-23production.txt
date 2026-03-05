@@ -1,0 +1,215 @@
+# 🚀 Triarch CodeAdvisor - Release Notes
+**Release Date:** March 3, 2026  
+**Version:** Production Release - Payment History + AI Follow-Up UX + Payment Security Hardening  
+**Pull Request:** [#128](https://github.com/OMIYAL/Triarch/pull/128)
+
+---
+
+## 📣 For End Users
+
+### ✨ What's New
+
+This release improves day-to-day usability with a brand-new **Payment History** experience, smarter **AI follow-up questions**, better **filter behavior**, and stronger **payment redirect safety**. The goal is to make billing, query exploration, and navigation more reliable and easier to use.
+
+#### 💳 **New Payment History Tab in Account Profile**
+You can now review your payment activity directly from your profile page without contacting support.
+
+- **Payment History Tab** - New tab appears in profile management alongside Subscription & Billing
+- **Clear transaction list** - See amount, status, payment method, customer details, and date
+- **Status filtering** - Filter by Succeeded, Pending, Failed, or Canceled
+- **Date range filtering** - Narrow results to specific billing periods
+- **CSV export** - Download your visible payment history to share with accounting
+- **Receipt download** - Download receipts/invoices when available for completed payments
+- **Top-ups + Subscriptions** - Unified view of one-time purchases and subscription invoices
+
+#### 🤖 **Smarter AI Follow-Up Experience**
+AI answers now provide cleaner and more actionable follow-up suggestions.
+
+- **Recommended follow-up buttons** - Follow-up questions are displayed as clickable buttons under responses
+- **Cleaner response body** - Follow-ups are removed from visible answer HTML and handled separately
+- **More relevant suggestions** - Follow-up prompts are generated from hidden response metadata for better context
+- **Consistent behavior** - Suggestions work reliably even when metadata parsing falls back
+
+#### 💬 **Chat Input and Interaction Improvements**
+The query composer and response interaction are now easier to use across screen sizes.
+
+- **Role label repositioned** - User role label now sits above the input for better readability
+- **Textarea spacing fixes** - Input no longer collides with action buttons on smaller layouts
+- **Improved typing state refresh** - Stop/Send UI updates feel more immediate during streaming
+- **Cleaner follow-up click handling** - Removed fragile DOM listener wiring in favor of Angular binding
+
+#### 🔎 **Better Filtering in Session History and Bookmarked Queries**
+Filtering now behaves more predictably when you are on later pages.
+
+- **Auto reset to first page** - Changing date/jurisdiction filters now resets pagination to page 1
+- **No blank result pages** - Prevents empty screens caused by stale page offsets after filters reduce result size
+- **Consistent behavior** - Same filter reset logic applied to both Session History and Bookmarked Queries
+
+#### 🔒 **Safer Payment Redirects and Checkout Navigation**
+Payment flows now include stronger redirect validation and better return paths.
+
+- **Safer return URL handling** - Redirects are validated against allowed domains to reduce open-redirect risk
+- **Cancel button returns to source page** - Stripe cancel flow now routes users back to Buy/Upgrade context
+- **Improved checkout metadata** - Payment metadata now supports better payment tracking and history lookup
+- **More reliable post-payment return** - Success flow validates and applies safe return URLs
+
+#### 🎨 **Visual & Account Experience Updates**
+Several UI refinements improve polish and consistency.
+
+- **Payment History localization** - New billing-related labels/messages added for consistent UX text
+- **Profile menu cleanup** - External logins entry is hidden from user profile menu
+- **Title spacing refinement** - Better spacing under page titles for readability
+- **Account link styling** - Login/Register/Forgot Password links now use Triarch brand styling with accessibility support
+
+---
+
+## 👨‍💻 For Developers
+
+### 🔧 Technical Changes
+
+#### **New Payment History Module (End-to-End)**
+- Added contracts and DTOs for payment history retrieval and receipt access:
+  - `GetPaymentHistoryInput`
+  - `PaymentHistoryDto`
+  - `PaymentReceiptDto`
+  - `IPaymentHistoryAppService`
+- Added `PaymentHistoryAppService` with Stripe-backed retrieval logic:
+  - Top-up flow via PaymentIntent search
+  - Subscription flow via Invoice listing
+  - Combined + filtered + sorted response model
+- Added `PaymentHistoryController` endpoints:
+  - `GET /api/app/payment-history`
+  - `GET /api/app/payment-history/receipt/{chargeId}`
+
+#### **Authorization & Permissions**
+- Introduced `CodeAdvisorPermissions.PaymentHistory.Default`
+- Registered permission in `CodeAdvisorPermissionDefinitionProvider`
+- Applied `[Authorize(CodeAdvisorPermissions.PaymentHistory.Default)]` on app service
+
+#### **Repository Layer for PaymentRequest Filtering**
+- Added `IPaymentRequestExtendedRepository`
+- Added `EfCorePaymentRequestExtendedRepository`
+- Registered repository in EF Core module DI
+- Implemented user/tenant scoped filtering + sorting + paging strategy for payment requests
+
+#### **Angular Payment History Integration**
+- Added profile tab registration in `manage-profile-tabs.provider.ts`
+- Added standalone Payment History tab component + data service
+- Added generated proxy surface under `@proxy/payment-history`
+- Added table rendering, status/date filters, CSV export, and receipt download UX
+
+#### **AI Follow-Up Query Refactor**
+- Backend now extracts follow-up queries from metadata block and persists separately
+- Removed follow-up section from visible response HTML before save
+- Updated prompt instructions to generate hidden follow-up metadata instead of embedded follow-up links
+- Frontend message model updated to carry `followUpQueries: string[]`
+- AI response component now renders follow-up buttons directly from parsed data
+
+#### **Payment Security Hardening**
+- Added return/cancel URL safety checks in payment flow pages/services
+- Added `SubscriptionConsts.CancelUrl`
+- Checkout session now respects validated stored URLs for success/cancel behavior
+- Added metadata field for payment request tracing in Stripe checkout options
+
+#### **Usability Fixes**
+- Session History and Bookmarked Queries filter changes now call `applyFilter()` and reset page index
+- Query input layout adjusted to avoid overlap and improve mobile behavior
+- Added explicit change detection mark during typing state transitions
+
+#### **CI / Automation**
+- Added `.github/workflows/playwright-tests.yml`
+- Supports staging/production targeting, browser selection, health checks, setup auth, and artifact upload
+
+---
+
+## 🧪 For QA/Testers
+
+### ✅ Testing Checklist
+
+#### **Payment History Tab**
+- [ ] Open profile management and verify **Payment History** tab appears
+- [ ] Confirm records render with amount/status/payment method/date
+- [ ] Apply **From/To Date** and **Status** filters
+- [ ] Validate pagination and sorting behavior
+- [ ] Export filtered results to CSV
+- [ ] Download receipt/invoice for succeeded entries
+
+#### **AI Follow-Up Suggestions**
+- [ ] Ask a question and verify follow-up buttons appear below AI response
+- [ ] Click a follow-up button and confirm it triggers next query flow
+- [ ] Confirm no duplicate follow-up block appears in main HTML answer body
+
+#### **Filter Reset Behavior**
+- [ ] Go to page >1 in Session History, apply filter, verify auto-reset to page 1
+- [ ] Repeat same flow for Bookmarked Queries
+
+#### **Payment Redirect Security & UX**
+- [ ] Start payment from Buy page, click cancel in Stripe, verify return to Buy page
+- [ ] Start upgrade payment, click cancel in Stripe, verify return to Upgrade page
+- [ ] Verify successful payment returns only to allowed URLs
+
+#### **Account/UI Updates**
+- [ ] Verify branded links on Login/Register pages
+- [ ] Verify External Logins menu item is hidden in profile menu
+- [ ] Verify page title spacing looks consistent across key pages
+
+---
+
+## 🎯 Migration Notes
+
+### Database Changes
+**No Entity Migration Required** for this release.
+
+### Breaking Changes
+**None expected** for existing API consumers.
+
+### Permissions
+- New permission introduced: `CodeAdvisor.PaymentHistory`
+- Ensure role mappings include this permission where payment history access is required.
+
+---
+
+## 🚀 Deployment Steps
+
+### 1. Backend
+```powershell
+# Deploy backend services
+# Verify payment history endpoints are reachable
+# Verify permission seed/config includes CodeAdvisor.PaymentHistory
+```
+
+### 2. Frontend
+```powershell
+cd angular
+npm install
+npm run build:prod
+# Deploy dist artifacts
+```
+
+### 3. Post-Deployment Verification
+- [ ] Profile shows Payment History tab for authorized users
+- [ ] Payment list and receipt retrieval work in production
+- [ ] AI responses show actionable follow-up buttons
+- [ ] Buy/Upgrade cancel redirects return to correct pages
+
+---
+
+## 🐛 Known Considerations
+
+1. **Stripe data availability timing**
+   - Some payment details may appear with short delay depending on Stripe processing state.
+
+2. **Receipt availability**
+   - Not all statuses expose receipts/invoices; succeeded payments are the primary supported case.
+
+---
+
+## 🎉 Summary
+
+This production release introduces a complete **Payment History** capability, improves **AI follow-up usability**, fixes **filter pagination edge cases**, and hardens **payment redirect security**. The result is a more trustworthy billing workflow, cleaner chat experience, and stronger operational reliability.
+
+---
+
+**Implementation Date:** March 3, 2026  
+**Developer:** GitHub Copilot + Human Review  
+**Architecture Pattern:** ABP Layered DDD + Reactive Angular + Secure Payment Flow
