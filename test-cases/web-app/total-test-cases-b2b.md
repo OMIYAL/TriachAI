@@ -64,6 +64,7 @@
 | TC-58      | Verify semi-dark theme to check all navigation| Verify all navigation| 1. Go to the https://staging.triarch.ai/?t=tarutenant<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> 6. Change the theme to semi-dark mode, then check all navigation | successful or fail|
 | TC-59      | Verify Tenant name Displayed in URL| Verify Tenant name Displayed| 1. Go to the https://staging.triarch.ai/?t=tarutenant<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | successful or fail|
 | TC-60       | Adopted codes should be visible and dropdown | Verify adopted codes are visible and dropdown | 1. Go to the https://staging.triarch.ai/?t=tarutenant<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> 6. Codes & Preferences |successful or fail|
+| TC-61       | Tenant Information Display | Verify Added Tenant name display in the top section of the interface. | 1. Go to the https://staging.triarch.ai/?t=tarutenant<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> |successful or fail|
 
 
 
