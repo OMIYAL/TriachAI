@@ -65,6 +65,9 @@
 | TC-59      | Verify Tenant name Displayed in URL| Verify Tenant name Displayed| 1. Go to the https://staging.triarch.ai/?t=tarutenant<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> | successful or fail|
 | TC-60       | Adopted codes should be visible and dropdown | Verify adopted codes are visible and dropdown | 1. Go to the https://staging.triarch.ai/?t=tarutenant<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> 6. Codes & Preferences |successful or fail|
 | TC-61       | Tenant Information Display | Verify Added Tenant name display in the top section of the interface. | 1. Go to the https://staging.triarch.ai/?t=tarutenant<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> |successful or fail|
+| TC-62       | Query Deduction from Tenant Quota | Verify Each query deducts from the tenant's individual allocation within the total B2B quota; | 1. Go to the https://staging.triarch.ai/?t=tarutenant<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> |successful or fail|
+| TC-63       | No Credit from Starter Plan | Verify Tenants do not receive free starter plan credits; all deductions from the total available queries. | 1. Go to the https://staging.triarch.ai/?t=tarutenant<br>2. Click on Sign In<br>4. Fill user and password for login<br>5.ArchAI Assistant open<br> |successful or fail|
+
 
 
 
