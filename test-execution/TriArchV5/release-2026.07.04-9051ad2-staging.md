@@ -1,1 +1,51 @@
-IyBSZWxlYXNlIDIwMjYuMDcuMDQtOTA1MWFkMiDigJQgU3RhZ2luZyBRQSBHdWlkZWxpbmUKKipFbnZpcm9ubWVudDoqKiBTdGFnaW5nCioqVmVyc2lvbjoqKiAyMDI2LjA3LjA0LTkwNTFhZDIKKipEYXRlOioqIDIwMjYtMDctMDQKKipTY29wZToqKiBQUnMgbWVyZ2VkIHNpbmNlIDIwMjYtMDctMDMgMTE6NDMgVVRDIChwcmV2aW91cyBzdGFnaW5nIGRlcGxveSkKCiMjIE5ldyBmZWF0dXJlcyB0byB0ZXN0Ck5vIG5ldC1uZXcgY2FwYWJpbGl0aWVzIGluIHRoaXMgZGVwbG95IOKAlCBhbGwgbWVyZ2VkIFBScyBhcmUgZml4ZXMvaW1wcm92ZW1lbnRzIHRvIGV4aXN0aW5nIGZ1bmN0aW9uYWxpdHkgKHNlZSBiZWxvdykuCgojIyBDaGFuZ2VzICYgZml4ZXMgdG8gcmUtdGVzdAoKKioxLiBEb2N1bWVudCBFZGl0b3Ig4oCUIFJpYmJvbiB0b29sYmFyLCBrZXlib2FyZCBzaG9ydGN1dHMsIGFuZCBmdWxsc2NyZWVuIGRpYWxvZ3MgKCMyODQpKioKUGFnZS9mbG93OiBEb2N1bWVudHMgc2VjdGlvbiDihpIgb3BlbiBhbnkgZG9jdW1lbnQgaW4gdGhlIGJ1aWx0LWluIGVkaXRvci4KLSBIYXBweSBwYXRoOiBPcGVuIGEgZG9jdW1lbnQsIHVzZSB0aGUgbmV3IHRhYmJlZCByaWJib24gdG9vbGJhciAoSG9tZS9JbnNlcnQvTGF5b3V0Ly4uLikgdG8gYXBwbHkgZm9ybWF0dGluZyAoYm9sZCwgaXRhbGljLCBmb250LCBhbGlnbm1lbnQsIGV0Yy4pLCBzYXZlLCBhbmQgY29uZmlybSB0aGUgY2hhbmdlcyBwZXJzaXN0LgotIEVkZ2UgY2FzZXM6CiAgLSBQcmVzcyBDdHJsK04gYW5kIEN0cmwrTyB3aGlsZSB0aGUgZWRpdG9yIGhhcyBmb2N1cyDigJQgY29uZmlybSBuZWl0aGVyIGJsYW5rcyB0aGUgb3BlbiBkb2N1bWVudCBub3Igc3dhcHMgaW4gYW4gdW5yZWxhdGVkIGZpbGUuCiAgLSBFbnRlciBmdWxsc2NyZWVuIG1vZGUgYW5kIGNvbmZpcm0gdGhlIGVkaXRvciBub3cgZmlsbHMgdGhlIHNjcmVlbiBjb3JyZWN0bHkgKHByZXZpb3VzbHkgcmVuZGVyZWQgdW5kZXJzaXplZC9kaXN0b3J0ZWQpLgogIC0gV2hpbGUgaW4gZnVsbHNjcmVlbiwgdHJpZ2dlciB0aGUgUmVuYW1lIC8gTW92ZSAvIFNoYXJlIGRpYWxvZ3MgYW5kIHRoZSBmaWxlIHJvdydzIGNvbnRleHQgbWVudSDigJQgY29uZmlybSB0aGV5IGFyZSB2aXNpYmxlIGFuZCB1c2FibGUgKHByZXZpb3VzbHkgaW52aXNpYmxlKS4KICAtIFdoaWxlIGluIGZ1bGxzY3JlZW4sIHVzZSB0aGUgcmliYm9uJ3MgSW5zZXJ0IFRhYmxlIC8gSW5zZXJ0IEltYWdlIC8gSW5zZXJ0IEh5cGVybGluayBkaWFsb2dzIOKAlCBjb25maXJtIHRoZXkgcmVuZGVyIHZpc2libHkuCiAgLSBDb25maXJtIHRoZSBmaWxlLXByb3BlcnRpZXMgcGFuZWwgdGhhdCB1c2VkIHRvIGFwcGVhciBiZWxvdyB0aGUgZG9jdW1lbnQgdmlld2VyIChUeXBlL1NpemUvTW9kaWZpZWQpIGhhcyBiZWVuIHJlbW92ZWQgYW5kIHRoZSB2aWV3ZXIncyBsYXlvdXQgc3RpbGwgbG9va3MgY29ycmVjdCB3aXRoIG5vIGdhcCBvciB2aXN1YWwgYnJlYWsuCiAgLSBFeGl0IGZ1bGxzY3JlZW4gYW5kIGNvbmZpcm0gYWxsIGRpYWxvZ3MgcmV0dXJuIHRvIG5vcm1hbCBpbi1wYWdlIHJlbmRlcmluZy4KCioqMi4gU2VydmljZSBEZWZpbml0aW9uIGNyZWF0aW9uIHdpdGggQ2VydGlmaWNhdGUgb3V0Y29tZSB0eXBlICgjMjg2KSoqClBhZ2UvZmxvdzogQ29udHJvbFJvb20g4oaSIFNlcnZpY2UgRGVmaW5pdGlvbnMg4oaSIGNyZWF0ZSBvciBlZGl0IGEgU2VydmljZSBEZWZpbml0aW9uIHdpdGggT3V0Y29tZSBUeXBlID0gQ2VydGlmaWNhdGUuCi0gSGFwcHkgcGF0aDogQ3JlYXRlIGEgbmV3IENlcnRpZmljYXRlLW91dGNvbWUgU2VydmljZSBEZWZpbml0aW9uIGFuZCBzYXZlIOKAlCBjb25maXJtIGl0IHNhdmVzIHN1Y2Nlc3NmdWxseSB3aXRoIG5vIGVycm9yLCBhbmQgaXRzIG1hbmRhdG9yeSBJc3N1YW5jZSBzdGVwIGlzIGFscmVhZHkgcHJlc2VudC4KLSBFZGdlIGNhc2VzOgogIC0gRWRpdCBhbiBleGlzdGluZyBTZXJ2aWNlIERlZmluaXRpb24gYW5kIGNoYW5nZSBpdHMgb3V0Y29tZSB0eXBlIHRvIENlcnRpZmljYXRlIOKAlCBjb25maXJtIHRoZSBJc3N1YW5jZSBzdGVwIGlzIHNjYWZmb2xkZWQgb25jZSwgd2l0aCBubyBkdXBsaWNhdGVzIG9uIHJlcGVhdGVkIHNhdmVzLgogIC0gQ3JlYXRlL2VkaXQgU2VydmljZSBEZWZpbml0aW9ucyB1c2luZyBldmVyeSBvdGhlciBvdXRjb21lIHR5cGUg4oCUIGNvbmZpcm0gbm8gcmVncmVzc2lvbiAodGhlc2Ugc2hvdWxkIGJlIHVuYWZmZWN0ZWQpLgoKKiozLiBBY2NvdW50IGludml0ZSBhbmQgcGFzc3dvcmQtcmVzZXQgZW1haWwgbGlua3MgKCMyODUpKioKRmxvdzogSW52aXRlIGEgbmV3IHVzZXIsIGFuZCBzZXBhcmF0ZWx5IHRyaWdnZXIgYSAiZm9yZ290IHBhc3N3b3JkIiByZXNldC4KLSBIYXBweSBwYXRoOiBDb25maXJtIHRoZSBpbnZpdGUgZW1haWwgbGluayBhbmQgdGhlIHBhc3N3b3JkLXJlc2V0IGVtYWlsIGxpbmsgYm90aCBwb2ludCB0byB0aGUgY29ycmVjdCBzdGFnaW5nIGFwcGxpY2F0aW9uIFVSTCBhbmQgbGFuZCBvbiB0aGUgZXhwZWN0ZWQgcGFnZS4KLSBFZGdlIGNhc2VzOgogIC0gQ29uZmlybSB0aGUgbGlua3MgcG9pbnQgdG8gdGhlIHN0YWdpbmcgYXV0aGVudGljYXRpb24gc2VydmVyLCBub3QgYSBtaXNjb25maWd1cmVkIG9yIHByb2R1Y3Rpb24gVVJMLgogIC0gQ29tcGxldGUgYW4gaW52aXRlIGFjY2VwdGFuY2UgYW5kIGEgcGFzc3dvcmQgcmVzZXQgZW5kLXRvLWVuZCB2aWEgdGhlIGVtYWlsZWQgbGlua3MgdG8gY29uZmlybSBubyBicm9rZW4gcmVkaXJlY3Qgb3IgNDA0LgoKIyMgUmlzayAvIHJlZ3Jlc3Npb24gYXJlYXMKLSBHZW5lcmFsIHJlZ3Jlc3Npb24gcGFzcyBvbiB0aGUgRG9jdW1lbnQgRWRpdG9yIGJleW9uZCB0aGUgc3BlY2lmaWMgZml4ZXMgYWJvdmUg4oCUIGZvcm1hdHRpbmcsIHNhdmluZywgYW5kIHRoZSBtYWlsLW1lcmdlLWZpZWxkcyBwYW5lbCAoa2VwdCBzZXBhcmF0ZSBmcm9tIHRoZSByaWJib24pIHNob3VsZCBiZSBleGVyY2lzZWQgYnJvYWRseSBnaXZlbiB0aGUgdG9vbGJhciByZW5kZXJpbmcgY2hhbmdlLgotIEZ1bGxzY3JlZW4gYmVoYXZpb3Igb24gb3RoZXIgZG9jdW1lbnQvZmlsZSB0eXBlcyB2aWV3ZWQgaW4gdGhlIERvY3VtZW50cyBzZWN0aW9uIChlLmcuIHJlYWQtb25seSBQREYvaW1hZ2UgcHJldmlld3MpLCB0byBjb25maXJtIHRoZSBmdWxsc2NyZWVuIGRpYWxvZy12aXNpYmlsaXR5IGZpeCBkb2Vzbid0IGFmZmVjdCBvdGhlciB2aWV3ZXJzLgotIEJyb2FkZXIgcGFzcyBhY3Jvc3MgU2VydmljZSBEZWZpbml0aW9uIC8gd29ya2Zsb3cgc3RlcCBjb25maWd1cmF0aW9uLCBzaW5jZSB0aGUgdW5kZXJseWluZyBzYXZlLXRpbWluZyBjaGFuZ2UgdG91Y2hlcyBhIHNoYXJlZCBjb2RlIHBhdGggdXNlZCBmb3IgYXV0b21hdGljIHN0ZXAgc2NhZmZvbGRpbmcuCi0gQnJvYWQgYXV0aGVudGljYXRpb24gcGFzczogbG9naW4sIHJlZ2lzdHJhdGlvbiwgaW52aXRlIGFjY2VwdGFuY2UsIGFuZCBwYXNzd29yZCByZXNldCBhY3Jvc3MgZGlmZmVyZW50IHRlbmFudHMvZW52aXJvbm1lbnRzLCB0byBjb25maXJtIHRoZSBVUkwgY29uZmlndXJhdGlvbiBjaGFuZ2UgZG9lc24ndCBhZmZlY3Qgb3RoZXIgYWNjb3VudCBmbG93cyBvciB0ZW5hbnQtc3BlY2lmaWMgcmVkaXJlY3RzLgoKIyMgTm8gUUEgYWN0aW9uCk5vbmUg4oCUIGFsbCBQUnMgaW4gdGhpcyBkZXBsb3kgYXJlIHVzZXItZmFjaW5nIGFuZCBjb3ZlcmVkIGFib3ZlLgoKIyMgQnVnICYgVGVzdCBUcmFja2luZwp8IEJ1ZyBJRCB8IFRlc3QgQ2FzZSBJRCB8IFByaW9yaXR5IHwgTW9kdWxlIHwgU3RhdHVzIHwgQXNzaWduZWQgVG8gfCBDb21tZW50cyB8CnwtLS0tLS0tLXwtLS0tLS0tLS0tLS0tLXwtLS0tLS0tLS0tfC0tLS0tLS0tfC0tLS0tLS0tfC0tLS0tLS0tLS0tLS18LS0tLS0tLS0tLXwKfCAgICAgICAgfCAgICAgICAgICAgICAgfCAgICAgICAgICB8ICAgICAgICB8ICAgICAgICB8ICAgICAgICAgICAgIHwgICAgICAgICAgfAp8ICAgICAgICB8ICAgICAgICAgICAgICB8ICAgICAgICAgIHwgICAgICAgIHwgICAgICAgIHwgICAgICAgICAgICAgfCAgICAgICAgICB8CnwgICAgICAgIHwgICAgICAgICAgICAgIHwgICAgICAgICAgfCAgICAgICAgfCAgICAgICAgfCAgICAgICAgICAgICB8ICAgICAgICAgIHwK
+# Release 2026.07.04-9051ad2 — Staging QA Guideline
+**Environment:** Staging
+**Version:** 2026.07.04-9051ad2
+**Date:** 2026-07-04
+**Scope:** PRs merged since 2026-07-03 11:43 UTC (previous staging deploy)
+
+## New features to test
+No net-new capabilities in this deploy — all merged PRs are fixes/improvements to existing functionality (see below).
+
+## Changes & fixes to re-test
+
+**1. Document Editor — Ribbon toolbar, keyboard shortcuts, and fullscreen dialogs (#284)**
+Page/flow: Documents section → open any document in the built-in editor.
+- Happy path: Open a document, use the new tabbed ribbon toolbar (Home/Insert/Layout/...) to apply formatting (bold, italic, font, alignment, etc.), save, and confirm the changes persist.
+- Edge cases:
+  - Press Ctrl+N and Ctrl+O while the editor has focus — confirm neither blanks the open document nor swaps in an unrelated file.
+  - Enter fullscreen mode and confirm the editor now fills the screen correctly (previously rendered undersized/distorted).
+  - While in fullscreen, trigger the Rename / Move / Share dialogs and the file row's context menu — confirm they are visible and usable (previously invisible).
+  - While in fullscreen, use the ribbon's Insert Table / Insert Image / Insert Hyperlink dialogs — confirm they render visibly.
+  - Confirm the file-properties panel that used to appear below the document viewer (Type/Size/Modified) has been removed and the viewer's layout still looks correct with no gap or visual break.
+  - Exit fullscreen and confirm all dialogs return to normal in-page rendering.
+
+**2. Service Definition creation with Certificate outcome type (#286)**
+Page/flow: ControlRoom → Service Definitions → create or edit a Service Definition with Outcome Type = Certificate.
+- Happy path: Create a new Certificate-outcome Service Definition and save — confirm it saves successfully with no error, and its mandatory Issuance step is already present.
+- Edge cases:
+  - Edit an existing Service Definition and change its outcome type to Certificate — confirm the Issuance step is scaffolded once, with no duplicates on repeated saves.
+  - Create/edit Service Definitions using every other outcome type — confirm no regression (these should be unaffected).
+
+**3. Account invite and password-reset email links (#285)**
+Flow: Invite a new user, and separately trigger a "forgot password" reset.
+- Happy path: Confirm the invite email link and the password-reset email link both point to the correct staging application URL and land on the expected page.
+- Edge cases:
+  - Confirm the links point to the staging authentication server, not a misconfigured or production URL.
+  - Complete an invite acceptance and a password reset end-to-end via the emailed links to confirm no broken redirect or 404.
+
+## Risk / regression areas
+- General regression pass on the Document Editor beyond the specific fixes above — formatting, saving, and the mail-merge-fields panel (kept separate from the ribbon) should be exercised broadly given the toolbar rendering change.
+- Fullscreen behavior on other document/file types viewed in the Documents section (e.g. read-only PDF/image previews), to confirm the fullscreen dialog-visibility fix doesn't affect other viewers.
+- Broader pass across Service Definition / workflow step configuration, since the underlying save-timing change touches a shared code path used for automatic step scaffolding.
+- Broad authentication pass: login, registration, invite acceptance, and password reset across different tenants/environments, to confirm the URL configuration change doesn't affect other account flows or tenant-specific redirects.
+
+## No QA action
+None — all PRs in this deploy are user-facing and covered above.
+
+## Bug & Test Tracking
+| Bug ID | Test Case ID | Priority | Module | Status | Assigned To | Comments |
+|--------|--------------|----------|--------|--------|-------------|----------|
+|        |              |          |        |        |             |          |
+|        |              |          |        |        |             |          |
+|        |              |          |        |        |             |          |
