@@ -1,0 +1,1 @@
+$(cat /tmp/claude-0/-home-user/8f24f2b0-fdff-5125-a46a-c30f0dccc406/scratchpad/release-2026.08.21-78ba9ea-staging.md)
